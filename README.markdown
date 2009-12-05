@@ -6,7 +6,7 @@ On December 2nd, 2009, I talked in Geneva on [iPhone Privacy](http://seriot.ch/r
 
 > Source: [iPhone in Business - Security Overview](http://images.apple.com/iphone/business/docs/iPhone_Security_Overview.pdf)
 
-SpyPhone is an application intented to show the kind of data a rogue application can collect in a non jailbroken iPhone.
+SpyPhone demoes it is not exactly true. It shows the kind of data a rogue application can collect in a non jailbroken iPhone.
 
 These data do certainly interest marketers, spammers, thieves, competitors and law enforcement officials.
 
