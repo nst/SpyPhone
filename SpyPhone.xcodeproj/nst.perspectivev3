@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>ActivePerspectiveName</key>
-	<string>Debug</string>
+	<string>Project</string>
 	<key>AllowedModules</key>
 	<array>
 		<dict>
@@ -294,6 +294,7 @@
 								<string>032A7B9010B829D100E7FB65</string>
 								<string>031748C110B6E67C00B6116E</string>
 								<string>031748C210B6E68E00B6116E</string>
+								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>29B97323FDCFA39411CA2CEA</string>
 								<string>19C28FACFE9D520D11CA2CBB</string>
@@ -304,14 +305,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>53</integer>
-									<integer>37</integer>
-									<integer>2</integer>
+									<integer>78</integer>
+									<integer>76</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 264}, {291, 760}}</string>
+							<string>{{0, 721}, {291, 760}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -329,6 +329,8 @@
 							<string>MainColumn</string>
 							<real>269</real>
 						</array>
+						<key>RubberWindowFrame</key>
+						<string>0 59 1440 819 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -339,12 +341,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>0328F4B210B05E8E0074A5A1</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>SPSourcePhotosTVC.m</string>
+								<string>main.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -352,14 +356,13 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>0328F4B310B05E8E0074A5A1</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>SPSourcePhotosTVC.m</string>
+										<string>main.m</string>
 										<key>_historyCapacity</key>
 										<integer>10</integer>
 										<key>bookmark</key>
-										<string>03D631E710CA046A00485DA5</string>
+										<string>03D631EE10CAD51A00485DA5</string>
 										<key>history</key>
 										<array>
-											<string>03AE1B0E10C741AA00E8F628</string>
 											<string>03AE1B0F10C741AA00E8F628</string>
 											<string>03AE1B1010C741AA00E8F628</string>
 											<string>03AE1B1110C741AA00E8F628</string>
@@ -367,8 +370,9 @@
 											<string>03AE1B1310C741AA00E8F628</string>
 											<string>03AE1B1410C741AA00E8F628</string>
 											<string>03AE1B1510C741AA00E8F628</string>
-											<string>03D631A810CA012C00485DA5</string>
-											<string>03D631E010CA03D000485DA5</string>
+											<string>03D631EB10CAD51A00485DA5</string>
+											<string>03D631EC10CAD51A00485DA5</string>
+											<string>03D631ED10CAD51A00485DA5</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -383,6 +387,8 @@
 							<dict>
 								<key>Frame</key>
 								<string>{{0, 0}, {1127, 619}}</string>
+								<key>RubberWindowFrame</key>
+								<string>0 59 1440 819 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -460,6 +466,8 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1127, 127}}</string>
+										<key>RubberWindowFrame</key>
+										<string>0 59 1440 819 0 0 1440 878 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -532,8 +540,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
@@ -545,8 +551,6 @@
 					<dict>
 						<key>Frame</key>
 						<string>{{0, 0}, {1440, 247}}</string>
-						<key>RubberWindowFrame</key>
-						<string>0 59 1440 819 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugCLIModule</string>
@@ -621,11 +625,7 @@
 							</array>
 							<key>Frame</key>
 							<string>{{703, 0}, {737, 254}}</string>
-							<key>RubberWindowFrame</key>
-							<string>0 59 1440 819 0 0 1440 878 </string>
 						</dict>
-						<key>RubberWindowFrame</key>
-						<string>0 59 1440 819 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugSessionModule</string>
@@ -672,7 +672,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>281674858.82824802</real>
+	<real>281728282.589513</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -689,7 +689,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>03D631E810CA046A00485DA5</string>
 		<string>03D631C410CA024300485DA5</string>
 		<string>03D631C510CA024300485DA5</string>
 		<string>/Users/nst/Projects/SpyPhone/SpyPhone.xcodeproj</string>
