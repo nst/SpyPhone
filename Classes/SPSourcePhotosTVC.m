@@ -56,12 +56,19 @@
 	
 	self.contentsDictionaries = [NSMutableArray array];
 	self.annotations = [NSMutableArray array];
+
 	
-	NSEnumerator *e = [[self jpgPaths] reverseObjectEnumerator];
+	NSEnumerator *e = [[[self jpgPaths] reverseObjectEnumerator] init];
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+
 	NSString *s = nil;
 	while(s = [e nextObject]) {
+		[pool release];
+		pool = [[NSAutoreleasePool alloc] init];
+		
 		CLLocationCoordinate2D coord = [UIImage coordinatesOfImageAtPath:s];
 		if(coord.latitude == 0.0 && coord.longitude == 0.0) continue;
+
 		
 		NSNumber *lat = [NSNumber numberWithDouble:coord.latitude];
 		NSNumber *lon = [NSNumber numberWithDouble:coord.longitude];
@@ -83,6 +90,9 @@
 		
 		[contentsDictionaries addObject:[NSDictionary dictionaryWithObject:[NSArray arrayWithObject:coordString] forKey:dateString]];
 	}
+	
+	[pool release];
+	
 }
 
 - (void)dealloc {

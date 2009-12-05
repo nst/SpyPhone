@@ -59,7 +59,6 @@
 		032A81CA10B8EB6100E7FB65 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032A81C910B8EB6100E7FB65 /* MessageUI.framework */; };
 		0364934110B16DDD00C88803 /* SPSourceKeyboardTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0364934010B16DDD00C88803 /* SPSourceKeyboardTVC.m */; };
 		0364948C10B28BC800C88803 /* SPSourceTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0364948B10B28BC800C88803 /* SPSourceTVC.m */; };
-		036495EC10B2EE7900C88803 /* misc.png in Resources */ = {isa = PBXBuildFile; fileRef = 036495EB10B2EE7900C88803 /* misc.png */; };
 		03B2C04E10BB624F00E05ECB /* Keyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 03B2C04D10BB624F00E05ECB /* Keyboard.png */; };
 		03B2C06110BB62A300E05ECB /* data.png in Resources */ = {isa = PBXBuildFile; fileRef = 03B2C06010BB62A300E05ECB /* data.png */; };
 		03B2C09410BB66DB00E05ECB /* report.png in Resources */ = {isa = PBXBuildFile; fileRef = 03B2C09310BB66DB00E05ECB /* report.png */; };
@@ -164,7 +163,6 @@
 		0364934010B16DDD00C88803 /* SPSourceKeyboardTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPSourceKeyboardTVC.m; sourceTree = "<group>"; };
 		0364948A10B28BC800C88803 /* SPSourceTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPSourceTVC.h; sourceTree = "<group>"; };
 		0364948B10B28BC800C88803 /* SPSourceTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPSourceTVC.m; sourceTree = "<group>"; };
-		036495EB10B2EE7900C88803 /* misc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = misc.png; sourceTree = "<group>"; };
 		03B2C04D10BB624F00E05ECB /* Keyboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Keyboard.png; sourceTree = "<group>"; };
 		03B2C06010BB62A300E05ECB /* data.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = data.png; sourceTree = "<group>"; };
 		03B2C09310BB66DB00E05ECB /* report.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = report.png; sourceTree = "<group>"; };
@@ -362,7 +360,6 @@
 				032A811B10B883FB00E7FB65 /* Default.png */,
 				032A80F210B8816300E7FB65 /* Icon.png */,
 				032A80F110B8816300E7FB65 /* white_hat.png */,
-				036495EB10B2EE7900C88803 /* misc.png */,
 				28AD73870D9D96C1002E5188 /* MainWindow.xib */,
 				282CCBFD0DB6C98000C4EA27 /* Sources.xib */,
 				0328F51310B065B80074A5A1 /* SPCell.xib */,
@@ -437,7 +434,6 @@
 				0328F51410B065B80074A5A1 /* SPCell.xib in Resources */,
 				0328F56310B070AE0074A5A1 /* SPSourceTVC.xib in Resources */,
 				0328F8BC10B0B1780074A5A1 /* SPWebViewVC.xib in Resources */,
-				036495EC10B2EE7900C88803 /* misc.png in Resources */,
 				032A7EAD10B85E7F00E7FB65 /* SPMapVC.xib in Resources */,
 				032A809A10B8799300E7FB65 /* SPImageVC.xib in Resources */,
 				032A80F410B8816300E7FB65 /* Icon.png in Resources */,
