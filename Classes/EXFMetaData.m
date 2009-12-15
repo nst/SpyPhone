@@ -1264,7 +1264,9 @@ const NSString* typeMappings [13] ={@"",@"CciISs",@"NSString",@"SsCcIi",@"LlIiSs
     
     // get the endian of the bytes
      UInt8 order[2];
-     CFDataGetBytes(*exifData, CFRangeMake(6,8), order);
+     //CFDataGetBytes(*exifData, CFRangeMake(6,8), order);
+	 CFDataGetBytes(*exifData, CFRangeMake(6,2), order);
+
      
      if (M_ORDER == order[0] && M_ORDER == order[1]){
          self.bigEndianOrder =YES;

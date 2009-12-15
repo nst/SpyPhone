@@ -29,10 +29,16 @@
 - (NSArray *)jpgPaths {
 	NSMutableArray *a = [NSMutableArray array];
 	
-	NSString *path = @"/var/mobile/Media/DCIM";
+//	NSString *path = @"/var/mobile/Media/DCIM";
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString *documentsDirectory = [paths count] ? [paths objectAtIndex:0] : nil;
+	NSString *path = [documentsDirectory stringByAppendingPathComponent:@"../../../Media/DCIM"];
+	path = [path stringByStandardizingPath];
+
 	NSDirectoryEnumerator *dirEnumerator = [[NSFileManager defaultManager] enumeratorAtPath:path];
-	
+
 	BOOL isDir;
+
 	BOOL exists;
 	NSString *filePath = nil;
 
@@ -58,7 +64,7 @@
 	self.annotations = [NSMutableArray array];
 
 	
-	NSEnumerator *e = [[[self jpgPaths] reverseObjectEnumerator] init];
+	NSEnumerator *e = [[self jpgPaths] reverseObjectEnumerator];
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 
 	NSString *s = nil;
