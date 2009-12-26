@@ -54,23 +54,18 @@
 	return a;
 }
 
-- (void)loadData {
-	if(contentsDictionaries) return;
+- (void)readPhotosInNewThread {
 
-	UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStylePlain target:self action:@selector(mapButtonClicked:)];
-	super.navigationItem.rightBarButtonItem = mapButton;
-	
-	self.contentsDictionaries = [NSMutableArray array];
-	self.annotations = [NSMutableArray array];
-
-	
-	NSEnumerator *e = [[self jpgPaths] reverseObjectEnumerator];
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+
+	NSEnumerator *e = [[self jpgPaths] reverseObjectEnumerator];
+
+	NSAutoreleasePool *subpool = [[NSAutoreleasePool alloc] init];
 
 	NSString *s = nil;
 	while(s = [e nextObject]) {
-		[pool release];
-		pool = [[NSAutoreleasePool alloc] init];
+		[subpool release];
+		subpool = [[NSAutoreleasePool alloc] init];
 		
 		CLLocationCoordinate2D coord = [UIImage coordinatesOfImageAtPath:s];
 		if(coord.latitude == 0.0 && coord.longitude == 0.0) continue;
@@ -92,13 +87,30 @@
 		NSString *dateString = date ? [date description] : @"";
 
 		SPImageAnnotation *annotation = [SPImageAnnotation annotationWithCoordinate:coord date:date path:s];
-		[annotations addObject:annotation];
+		[annotations performSelectorOnMainThread:@selector(addObject:) withObject:annotation waitUntilDone:YES];
+
+		NSDictionary *cd = [NSDictionary dictionaryWithObject:[NSArray arrayWithObject:coordString] forKey:dateString];
+		[contentsDictionaries performSelectorOnMainThread:@selector(addObject:) withObject:cd waitUntilDone:YES];
 		
-		[contentsDictionaries addObject:[NSDictionary dictionaryWithObject:[NSArray arrayWithObject:coordString] forKey:dateString]];
+		[self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
+		
+		[mapVC performSelectorOnMainThread:@selector(addAnnotation:) withObject:annotation waitUntilDone:YES];
 	}
 	
+	[subpool release];
 	[pool release];
+}
+
+- (void)loadData {
+	if(contentsDictionaries) return;
+
+	UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStylePlain target:self action:@selector(mapButtonClicked:)];
+	super.navigationItem.rightBarButtonItem = mapButton;
 	
+	self.contentsDictionaries = [NSMutableArray array];
+	self.annotations = [NSMutableArray array];
+
+	[NSThread detachNewThreadSelector:@selector(readPhotosInNewThread) toTarget:self withObject:nil];
 }
 
 - (void)dealloc {

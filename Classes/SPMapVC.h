@@ -21,6 +21,8 @@
 
 @property (nonatomic, retain) NSArray *annotations;
 
+- (void)addAnnotation:(id <MKAnnotation>)annotation;
+
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation;
 
 @end

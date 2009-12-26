@@ -14,6 +14,10 @@
 
 @synthesize annotations;
 
+- (void)addAnnotation:(id <MKAnnotation>)annotation {
+	[mapView addAnnotation:annotation];
+}
+
 - (MKAnnotationView *)mapView:(MKMapView *)aMapView viewForAnnotation:(id <MKAnnotation>)annotation {
 	
 	if([annotation isKindOfClass:[MKUserLocation class]]) return nil;
@@ -52,7 +56,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-	mapView.showsUserLocation = YES;
+	//mapView.showsUserLocation = YES;
 
 	if([annotations count] == 0) return;
 	
