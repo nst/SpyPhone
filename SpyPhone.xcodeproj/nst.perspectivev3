@@ -304,12 +304,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>102</integer>
-									<integer>90</integer>
+									<integer>19</integer>
+									<integer>17</integer>
+									<integer>2</integer>
+									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 564}, {291, 760}}</string>
+							<string>{{0, 0}, {291, 760}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -339,12 +341,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>0328F4B210B05E8E0074A5A1</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>SPSourcePhoneTVC.m</string>
+								<string>SPSourceTVC.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -352,23 +356,23 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>0328F4B310B05E8E0074A5A1</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>SPSourcePhoneTVC.m</string>
+										<string>SPSourceTVC.m</string>
 										<key>_historyCapacity</key>
 										<integer>10</integer>
 										<key>bookmark</key>
-										<string>038A9AAD10E80A870019AF60</string>
+										<string>038A9AC610E80EE20019AF60</string>
 										<key>history</key>
 										<array>
-											<string>038A9A7310E8064E0019AF60</string>
-											<string>038A9A2110E803DA0019AF60</string>
-											<string>038A9A8310E807220019AF60</string>
 											<string>038A9A8610E8076C0019AF60</string>
 											<string>038A9A8710E8076C0019AF60</string>
 											<string>038A9A9610E8082E0019AF60</string>
 											<string>038A9AA410E80A530019AF60</string>
 											<string>038A9AA510E80A530019AF60</string>
 											<string>038A9A7010E8064E0019AF60</string>
-											<string>038A9AAC10E80A850019AF60</string>
+											<string>038A9AB010E80CFC0019AF60</string>
+											<string>038A9A2110E803DA0019AF60</string>
+											<string>038A9AC410E80EE20019AF60</string>
+											<string>038A9AC510E80EE20019AF60</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -668,7 +672,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>283642503.813146</real>
+	<real>283643618.10111302</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>

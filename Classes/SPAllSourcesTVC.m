@@ -102,6 +102,7 @@
 	
 	SPSourceTVC *sourceTVC = [sources objectAtIndex:indexPath.row];	
 	
+	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	cell.textLabel.text = [sourceTVC title];
 	cell.imageView.image = [sourceTVC image];
 	return cell;
