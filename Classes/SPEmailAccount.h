@@ -13,17 +13,19 @@
 
 @interface SPEmailAccount : NSObject {
 	NSString *fullname;
-	NSString *email;
+	NSArray *email;
 	NSString *type;
 	NSString *hostname;
 	NSString *username;
+	NSString *displayName;
 }
 
 @property (nonatomic, retain) NSString *fullname;
-@property (nonatomic, retain) NSString *email;
+@property (nonatomic, retain) NSArray *email;
 @property (nonatomic, retain) NSString *type;
 @property (nonatomic, retain) NSString *hostname;
 @property (nonatomic, retain) NSString *username;
+@property (nonatomic, retain) NSString *displayName;
 
 + (SPEmailAccount *)accountWithDictionary:(NSDictionary *)d;
 - (NSArray *)infoArray;

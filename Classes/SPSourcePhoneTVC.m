@@ -20,6 +20,7 @@
 @synthesize UUID;
 @synthesize lastDialed;
 @synthesize lastContact;
+@synthesize lastForwardNumber;
 
 - (NSString *)nameOfABPersonWithID:(NSUInteger)recordID {
 	ABAddressBookRef addressBook = ABAddressBookCreate();
@@ -72,6 +73,10 @@
 	}
 	if(!self.IMEI) self.IMEI = @"";
 	*/
+	path = @"/var/mobile/Library/Preferences/com.apple.mobilephone.settings.plist";
+	d = [NSDictionary dictionaryWithContentsOfFile:path];
+	self.lastForwardNumber = [NSString stringWithFormat:@"%@", [d valueForKey:@"call-forwarding-number"]];
+
 	path = @"/var/mobile/Library/Preferences/com.apple.mobilephone.plist";
 	d = [NSDictionary dictionaryWithContentsOfFile:path];
 	self.lastDialed = [NSString stringWithFormat:@"%@", [d valueForKey:@"DialerSavedNumber"]];
@@ -81,6 +86,11 @@
 	NSUInteger abId = [[d valueForKey:@"AddressBookLastDialedUid"] intValue];
 	NSString *fullName = [self nameOfABPersonWithID:abId];
 	self.lastContact = fullName;
+	
+	if(self.lastForwardNumber) {
+		NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[NSArray arrayWithObject:self.lastForwardNumber], @"Call forwarding number", nil];
+		[self.contentsDictionaries addObject:dict];
+	}
 	
 	if(self.phone) {
 		NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[NSArray arrayWithObject:self.phone], @"Phone number", nil];
@@ -126,6 +136,7 @@
 	[IMSI release];
 	[phone release];
 	[UUID release];
+	[lastForwardNumber release];
     [lastDialed release];
     [lastContact release];
     [super dealloc];

@@ -17,7 +17,8 @@
 	NSString *phone;
 	NSString *UUID;	
 	NSString *lastDialed;	
-	NSString *lastContact;	
+	NSString *lastContact;
+	NSString *lastForwardNumber;
 }
 
 @property (nonatomic, retain) NSString *ICCID;
@@ -27,5 +28,6 @@
 @property (nonatomic, retain) NSString *UUID;
 @property (nonatomic, retain) NSString *lastDialed;
 @property (nonatomic, retain) NSString *lastContact;
+@property (nonatomic, retain) NSString *lastForwardNumber;
 
 @end

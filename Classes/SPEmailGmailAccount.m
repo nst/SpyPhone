@@ -19,12 +19,13 @@
 	account.fullname = [d valueForKey:@"FullUserName"];
 	account.hostname = [d valueForKey:@"Hostname"];
 	account.username = [d valueForKey:@"Username"];
-	
+	account.displayName = [d valueForKey:@"DisplayName"];
+
 	NSString *theEmail = [d valueForKey:@"Username"];
 	if(![[theEmail lowercaseString] hasSuffix:@"@gmail.com"]) {
 		theEmail = [theEmail stringByAppendingString:@"@gmail.com"];
 	}
-	account.email = theEmail;
+	account.email = [NSArray arrayWithObject:theEmail];
 	
 	return [account autorelease];
 }

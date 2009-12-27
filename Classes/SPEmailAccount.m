@@ -17,6 +17,7 @@
 @synthesize type;
 @synthesize hostname;
 @synthesize username;
+@synthesize displayName;
 
 - (void)dealloc {
 	[fullname release];
@@ -24,6 +25,7 @@
 	[type release];
 	[hostname release];
 	[username release];
+	[displayName release];
 	[super dealloc];
 }
 
@@ -38,6 +40,10 @@
 	if(type) [a addObject:[NSString stringWithFormat:@"Type: %@", type]];
 	if(hostname) [a addObject:[NSString stringWithFormat:@"Host: %@", hostname]];
 	if(username) [a addObject:[NSString stringWithFormat:@"User: %@", username]];
+	if(email) {
+		for (id emailAddress in email)
+			[a addObject:[NSString stringWithFormat:@"Email: %@", emailAddress]];
+	}
 
 	return a;
 }

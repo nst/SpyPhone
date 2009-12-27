@@ -17,9 +17,10 @@
 	
 	account.type = [d valueForKey:@"Short Type String"];
 	account.fullname = [d valueForKey:@"FullUserName"];
-	account.email = [[d valueForKey:@"EmailAddresses"] lastObject];
+	account.email = [d valueForKey:@"EmailAddresses"];
 	account.hostname = [d valueForKey:@"Hostname"];
 	account.username = [d valueForKey:@"Username"];
+	account.displayName = [d valueForKey:@"DisplayName"];
 	
 	return [account autorelease];
 }

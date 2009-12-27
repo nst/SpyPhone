@@ -17,10 +17,11 @@
 	
 	account.type = [d valueForKey:@"Short Type String"];
 	//account.fullname = nil;
-	account.email = [d valueForKey:@"ASAccountEmailAddress"];
+	account.email = [NSArray arrayWithObject:[d valueForKey:@"ASAccountEmailAddress"]];
 	account.hostname = [d valueForKey:@"ASAccountHost"];
 	account.username = [d valueForKey:@"ASAccountUsername"];
-	
+	account.displayName = [d valueForKey:@"DisplayName"];
+
 	return [account autorelease];
 }
 
