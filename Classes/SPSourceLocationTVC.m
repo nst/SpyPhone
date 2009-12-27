@@ -25,7 +25,7 @@
 	NSString *path = @"/var/mobile/Library/Preferences/com.apple.Maps.plist";
 	NSDictionary *d = [NSDictionary dictionaryWithContentsOfFile:path];
 	NSData *data = [d valueForKey:@"UserLocation"];
-	CLLocation *loc = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+	CLLocation *loc = data ? [NSKeyedUnarchiver unarchiveObjectWithData:data] : nil;
 	self.locString = @"";
 	self.locDateString = @"";
 	if(loc) {

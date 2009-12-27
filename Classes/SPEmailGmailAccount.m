@@ -25,7 +25,7 @@
 	if(![[theEmail lowercaseString] hasSuffix:@"@gmail.com"]) {
 		theEmail = [theEmail stringByAppendingString:@"@gmail.com"];
 	}
-	account.email = [NSArray arrayWithObject:theEmail];
+	account.emails = [NSArray arrayWithObject:theEmail];
 	
 	return [account autorelease];
 }

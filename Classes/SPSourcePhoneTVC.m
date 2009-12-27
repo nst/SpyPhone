@@ -75,7 +75,9 @@
 	*/
 	path = @"/var/mobile/Library/Preferences/com.apple.mobilephone.settings.plist";
 	d = [NSDictionary dictionaryWithContentsOfFile:path];
-	self.lastForwardNumber = [NSString stringWithFormat:@"%@", [d valueForKey:@"call-forwarding-number"]];
+	
+	NSString *callForwardingNumber = [d valueForKey:@"call-forwarding-number"];
+	self.lastForwardNumber = callForwardingNumber ? [NSString stringWithFormat:@"%@", callForwardingNumber] : nil;
 
 	path = @"/var/mobile/Library/Preferences/com.apple.mobilephone.plist";
 	d = [NSDictionary dictionaryWithContentsOfFile:path];

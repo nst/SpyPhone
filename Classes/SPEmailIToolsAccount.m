@@ -18,12 +18,11 @@
 	account.type = [d valueForKey:@"Short Type String"];
 	account.fullname = [d valueForKey:@"FullUserName"];
 	NSArray *theEmailAddresses = [d valueForKey:@"EmailAddresses"];
-	NSMutableArray *a = [NSMutableArray array];
-	if(theEmailAddresses) {
-		for (id emailAddress in theEmailAddresses)
-			[a addObject:[NSString stringWithFormat:@"%@@me.com", emailAddress]];
+	NSMutableArray *theEmails = [NSMutableArray array];
+	for (id emailAddress in theEmailAddresses) {
+		[theEmails addObject:[NSString stringWithFormat:@"%@@me.com", emailAddress]];
 	}
-	account.email = a;
+	account.emails = theEmails;
 	//account.hostname = nil;
 	account.username = [d valueForKey:@"Username"];
 	account.displayName = [d valueForKey:@"DisplayName"];

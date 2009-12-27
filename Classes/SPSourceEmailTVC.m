@@ -52,8 +52,8 @@
 	}
 	
 	for(SPEmailAccount *account in accountsFound) {
-		if(!account.email) continue;
-		[emails addObject:account.email];
+		if(!account.emails) continue;
+		[emails addObjectsFromArray:account.emails];
 		[contentsDictionaries addObject:[NSDictionary dictionaryWithObject:[account infoArray] forKey:account.displayName]];			
 	}	
 }

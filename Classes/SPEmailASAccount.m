@@ -17,7 +17,7 @@
 	
 	account.type = [d valueForKey:@"Short Type String"];
 	//account.fullname = nil;
-	account.email = [NSArray arrayWithObject:[d valueForKey:@"ASAccountEmailAddress"]];
+	account.emails = [NSArray arrayWithObject:[d valueForKey:@"ASAccountEmailAddress"]];
 	account.hostname = [d valueForKey:@"ASAccountHost"];
 	account.username = [d valueForKey:@"ASAccountUsername"];
 	account.displayName = [d valueForKey:@"DisplayName"];

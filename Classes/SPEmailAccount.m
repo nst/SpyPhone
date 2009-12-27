@@ -13,7 +13,7 @@
 @implementation SPEmailAccount
 
 @synthesize fullname;
-@synthesize email;
+@synthesize emails;
 @synthesize type;
 @synthesize hostname;
 @synthesize username;
@@ -21,7 +21,7 @@
 
 - (void)dealloc {
 	[fullname release];
-	[email release];
+	[emails release];
 	[type release];
 	[hostname release];
 	[username release];
@@ -40,8 +40,8 @@
 	if(type) [a addObject:[NSString stringWithFormat:@"Type: %@", type]];
 	if(hostname) [a addObject:[NSString stringWithFormat:@"Host: %@", hostname]];
 	if(username) [a addObject:[NSString stringWithFormat:@"User: %@", username]];
-	if(email) {
-		for (id emailAddress in email)
+	if(emails) {
+		for (id emailAddress in emails)
 			[a addObject:[NSString stringWithFormat:@"Email: %@", emailAddress]];
 	}
 

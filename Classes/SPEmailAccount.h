@@ -13,7 +13,7 @@
 
 @interface SPEmailAccount : NSObject {
 	NSString *fullname;
-	NSArray *email;
+	NSArray *emails;
 	NSString *type;
 	NSString *hostname;
 	NSString *username;
@@ -21,7 +21,7 @@
 }
 
 @property (nonatomic, retain) NSString *fullname;
-@property (nonatomic, retain) NSArray *email;
+@property (nonatomic, retain) NSArray *emails;
 @property (nonatomic, retain) NSString *type;
 @property (nonatomic, retain) NSString *hostname;
 @property (nonatomic, retain) NSString *username;
