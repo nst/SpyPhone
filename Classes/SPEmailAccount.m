@@ -18,6 +18,7 @@
 @synthesize hostname;
 @synthesize username;
 @synthesize displayName;
+@synthesize calendars;
 
 - (void)dealloc {
 	[fullname release];
@@ -43,6 +44,10 @@
 	if(emails) {
 		for (id emailAddress in emails)
 			[a addObject:[NSString stringWithFormat:@"Email: %@", emailAddress]];
+	}
+	if (calendars) {
+		for (id calendar in calendars)
+			[a addObject:[NSString stringWithFormat:@"Calendar URL: %@", calendar]];
 	}
 
 	return a;

@@ -14,6 +14,7 @@
 #import "SPEmailIToolsAccount.h"
 #import "SPEmailGmailAccount.h"
 #import "SPEmailIMAPAccount.h"
+#import "SPEmailMobileMeAccount.h"
 
 @implementation SPSourceEmailTVC
 
@@ -44,11 +45,12 @@
 	NSArray *accounts = [d valueForKey:@"Accounts"];
 	for(NSDictionary *account in accounts) {
 		NSString *classValue = [account valueForKey:@"Class"];
-		if([classValue isEqualToString:@"ASAccount"])     [accountsFound addObject:[SPEmailASAccount accountWithDictionary:account]];
-		if([classValue isEqualToString:@"POPAccount"])    [accountsFound addObject:[SPEmailPOPAccount accountWithDictionary:account]];
-		if([classValue isEqualToString:@"iToolsAccount"]) [accountsFound addObject:[SPEmailIToolsAccount accountWithDictionary:account]];
-		if([classValue isEqualToString:@"GmailAccount"])  [accountsFound addObject:[SPEmailGmailAccount accountWithDictionary:account]];
-		if([classValue isEqualToString:@"IMAPAccount"])   [accountsFound addObject:[SPEmailIMAPAccount accountWithDictionary:account]];
+		if([classValue isEqualToString:@"ASAccount"])       [accountsFound addObject:[SPEmailASAccount accountWithDictionary:account]];
+		if([classValue isEqualToString:@"POPAccount"])      [accountsFound addObject:[SPEmailPOPAccount accountWithDictionary:account]];
+		if([classValue isEqualToString:@"iToolsAccount"])   [accountsFound addObject:[SPEmailIToolsAccount accountWithDictionary:account]];
+		if([classValue isEqualToString:@"GmailAccount"])    [accountsFound addObject:[SPEmailGmailAccount accountWithDictionary:account]];
+		if([classValue isEqualToString:@"IMAPAccount"])	    [accountsFound addObject:[SPEmailIMAPAccount accountWithDictionary:account]];
+		if([classValue isEqualToString:@"MobileMeAccount"])	[accountsFound addObject:[SPEmailMobileMeAccount accountWithDictionary:account]];
 	}
 	
 	for(SPEmailAccount *account in accountsFound) {

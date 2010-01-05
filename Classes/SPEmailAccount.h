@@ -18,6 +18,7 @@
 	NSString *hostname;
 	NSString *username;
 	NSString *displayName;
+	NSMutableArray *calendars;
 }
 
 @property (nonatomic, retain) NSString *fullname;
@@ -26,6 +27,7 @@
 @property (nonatomic, retain) NSString *hostname;
 @property (nonatomic, retain) NSString *username;
 @property (nonatomic, retain) NSString *displayName;
+@property (nonatomic, retain) NSArray *calendars;
 
 + (SPEmailAccount *)accountWithDictionary:(NSDictionary *)d;
 - (NSArray *)infoArray;
