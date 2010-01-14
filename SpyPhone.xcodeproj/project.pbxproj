@@ -15,6 +15,9 @@
 		0317498610B6F3A300B6116E /* SPEmailGmailAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 0317498510B6F3A300B6116E /* SPEmailGmailAccount.m */; };
 		0317498910B6F49300B6116E /* SPEmailIMAPAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 0317498810B6F49300B6116E /* SPEmailIMAPAccount.m */; };
 		031749AF10B6FB9C00B6116E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 031749AE10B6FB9C00B6116E /* AddressBook.framework */; };
+		0317DE5210FF954800C5C2D4 /* UIApplication_TVOut.m in Sources */ = {isa = PBXBuildFile; fileRef = 0317DE5110FF954800C5C2D4 /* UIApplication_TVOut.m */; };
+		0317DE6910FF95CC00C5C2D4 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0317DE6810FF95CC00C5C2D4 /* MediaPlayer.framework */; };
+		0317DE7C10FF98E900C5C2D4 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0317DE7B10FF98E900C5C2D4 /* Settings.bundle */; };
 		031CD55010BB4A29007C133E /* Email.png in Resources */ = {isa = PBXBuildFile; fileRef = 031CD54810BB4A29007C133E /* Email.png */; };
 		031CD55110BB4A29007C133E /* Location.png in Resources */ = {isa = PBXBuildFile; fileRef = 031CD54910BB4A29007C133E /* Location.png */; };
 		031CD55310BB4A29007C133E /* Phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 031CD54B10BB4A29007C133E /* Phone.png */; };
@@ -92,6 +95,9 @@
 		0317498710B6F49300B6116E /* SPEmailIMAPAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPEmailIMAPAccount.h; sourceTree = "<group>"; };
 		0317498810B6F49300B6116E /* SPEmailIMAPAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPEmailIMAPAccount.m; sourceTree = "<group>"; };
 		031749AE10B6FB9C00B6116E /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		0317DE5110FF954800C5C2D4 /* UIApplication_TVOut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIApplication_TVOut.m; sourceTree = "<group>"; };
+		0317DE6810FF95CC00C5C2D4 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		0317DE7B10FF98E900C5C2D4 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		031CD54810BB4A29007C133E /* Email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Email.png; sourceTree = "<group>"; };
 		031CD54910BB4A29007C133E /* Location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Location.png; sourceTree = "<group>"; };
 		031CD54B10BB4A29007C133E /* Phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Phone.png; sourceTree = "<group>"; };
@@ -199,6 +205,7 @@
 				031749AF10B6FB9C00B6116E /* AddressBook.framework in Frameworks */,
 				032A7D9010B844EF00E7FB65 /* CoreLocation.framework in Frameworks */,
 				032A81CA10B8EB6100E7FB65 /* MessageUI.framework in Frameworks */,
+				0317DE6910FF95CC00C5C2D4 /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				28A0AB4B0D9B1048005BE974 /* SpyPhone_Prefix.pch */,
+				0317DE5110FF954800C5C2D4 /* UIApplication_TVOut.m */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
@@ -374,6 +382,7 @@
 				032A7EAC10B85E7F00E7FB65 /* SPMapVC.xib */,
 				032A809910B8799300E7FB65 /* SPImageVC.xib */,
 				032A819210B8E7BA00E7FB65 /* SPEmailReportVC.xib */,
+				0317DE7B10FF98E900C5C2D4 /* Settings.bundle */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -388,6 +397,7 @@
 				031749AE10B6FB9C00B6116E /* AddressBook.framework */,
 				032A7D8F10B844EF00E7FB65 /* CoreLocation.framework */,
 				032A81C910B8EB6100E7FB65 /* MessageUI.framework */,
+				0317DE6810FF95CC00C5C2D4 /* MediaPlayer.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -459,6 +469,7 @@
 				03B2C04E10BB624F00E05ECB /* Keyboard.png in Resources */,
 				03B2C06110BB62A300E05ECB /* data.png in Resources */,
 				03B2C09410BB66DB00E05ECB /* report.png in Resources */,
+				0317DE7C10FF98E900C5C2D4 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +515,7 @@
 				032A819710B8E7C600E7FB65 /* SPEmailReportVC.m in Sources */,
 				0310C65510C4BE0800E7ACD2 /* SPImageVC.m in Sources */,
 				037D3A8110F3D57B003A85B0 /* SPEmailMobileMeAccount.m in Sources */,
+				0317DE5210FF954800C5C2D4 /* UIApplication_TVOut.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
