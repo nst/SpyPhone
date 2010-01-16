@@ -303,14 +303,12 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>47</integer>
-									<integer>46</integer>
-									<integer>28</integer>
-									<integer>0</integer>
+									<integer>65</integer>
+									<integer>63</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {291, 760}}</string>
+							<string>{{0, 498}, {291, 760}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -345,7 +343,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>0328F4B210B05E8E0074A5A1</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Root.plist</string>
+								<string>SPSourceAddressBookTVC.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -353,14 +351,13 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>0328F4B310B05E8E0074A5A1</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Root.plist</string>
+										<string>SPSourceAddressBookTVC.m</string>
 										<key>_historyCapacity</key>
 										<integer>10</integer>
 										<key>bookmark</key>
-										<string>0317DEC710FF9C4E00C5C2D4</string>
+										<string>0315FC791101F26F00760B3B</string>
 										<key>history</key>
 										<array>
-											<string>037D3AA510F3D7C6003A85B0</string>
 											<string>037D3AA610F3D7C6003A85B0</string>
 											<string>0317DE5510FF95AE00C5C2D4</string>
 											<string>0317DE5610FF95AE00C5C2D4</string>
@@ -369,7 +366,8 @@
 											<string>0317DE8E10FF995B00C5C2D4</string>
 											<string>0317DE9B10FF99DB00C5C2D4</string>
 											<string>0317DEC610FF9C4E00C5C2D4</string>
-											<string>0317DE9C10FF99DB00C5C2D4</string>
+											<string>0315FC701101F1EE00760B3B</string>
+											<string>0315FC781101F26D00760B3B</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -383,18 +381,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1127, 567}}</string>
+								<string>{{0, 0}, {1127, 561}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 59 1440 819 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>567pt</string>
+							<string>561pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>206pt</string>
+							<string>212pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -408,7 +406,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1127, 179}}</string>
+										<string>{{10, 27}, {1127, 185}}</string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -424,7 +422,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1127, 169}}</string>
+										<string>{{10, 27}, {1127, 185}}</string>
 									</dict>
 									<key>Module</key>
 									<string>PBXProjectFindModule</string>
@@ -462,7 +460,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1127, 179}}</string>
+										<string>{{10, 27}, {1127, 185}}</string>
 										<key>RubberWindowFrame</key>
 										<string>0 59 1440 819 0 0 1440 878 </string>
 									</dict>
@@ -492,11 +490,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>0317DE4610FF952400C5C2D4</string>
+				<string>0315FC731101F1EE00760B3B</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>0317DE4710FF952400C5C2D4</string>
+				<string>0315FC741101F1EE00760B3B</string>
 				<string>0328F4B210B05E8E0074A5A1</string>
-				<string>0317DE4810FF952400C5C2D4</string>
+				<string>0315FC751101F1EE00760B3B</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -669,7 +667,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>285187150.248335</real>
+	<real>285340271.94513398</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -686,8 +684,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>0317DE9410FF995C00C5C2D4</string>
-		<string>0317DE9510FF995C00C5C2D4</string>
 		<string>/Users/nst/Projects/SpyPhone/SpyPhone.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

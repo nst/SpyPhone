@@ -36,7 +36,7 @@
 	
 	CFRelease(addressBook);
 		
-	NSString *keyName = [NSString stringWithFormat:@"%d Emails Addresses", [allEmails count]];
+	NSString *keyName = [NSString stringWithFormat:@"%d Email Addresses", [allEmails count]];
 	self.contentsDictionaries = [NSArray arrayWithObject:[NSDictionary dictionaryWithObject:allEmails forKey:keyName]];
 }
 
