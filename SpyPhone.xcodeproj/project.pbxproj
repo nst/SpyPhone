@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -69,6 +69,11 @@
 		03B6EFCA10BB547600CF9139 /* gpl-2.0.txt in Resources */ = {isa = PBXBuildFile; fileRef = 03B6EFC910BB547600CF9139 /* gpl-2.0.txt */; };
 		03B6F00410BB588A00CF9139 /* white_hat_mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 03B6F00310BB588A00CF9139 /* white_hat_mask.png */; };
 		03B6F03510BB5F4800CF9139 /* email_mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 03B6F03410BB5F4800CF9139 /* email_mask.png */; };
+		03F247141236E1440017F214 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F2470F1236E1440017F214 /* FMDatabase.m */; };
+		03F247151236E1440017F214 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F247111236E1440017F214 /* FMDatabaseAdditions.m */; };
+		03F247161236E1440017F214 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F247131236E1440017F214 /* FMResultSet.m */; };
+		03F2472F1236E25E0017F214 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 03F2472E1236E25E0017F214 /* libsqlite3.dylib */; };
+		03F2481F1236EFAC0017F214 /* NSNumber+SP.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F2481E1236EFAC0017F214 /* NSNumber+SP.m */; };
 		1D3623260D0F684500981E51 /* SpyPhoneAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* SpyPhoneAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -178,6 +183,15 @@
 		03B6EFC910BB547600CF9139 /* gpl-2.0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "gpl-2.0.txt"; sourceTree = "<group>"; };
 		03B6F00310BB588A00CF9139 /* white_hat_mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white_hat_mask.png; sourceTree = "<group>"; };
 		03B6F03410BB5F4800CF9139 /* email_mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email_mask.png; sourceTree = "<group>"; };
+		03F2470E1236E1440017F214 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		03F2470F1236E1440017F214 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		03F247101236E1440017F214 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		03F247111236E1440017F214 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		03F247121236E1440017F214 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		03F247131236E1440017F214 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		03F2472E1236E25E0017F214 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = /usr/lib/libsqlite3.dylib; sourceTree = "<absolute>"; };
+		03F2481D1236EFAC0017F214 /* NSNumber+SP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+SP.h"; sourceTree = "<group>"; };
+		03F2481E1236EFAC0017F214 /* NSNumber+SP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+SP.m"; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* SpyPhoneAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpyPhoneAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* SpyPhoneAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpyPhoneAppDelegate.m; sourceTree = "<group>"; };
@@ -206,6 +220,7 @@
 				032A7D9010B844EF00E7FB65 /* CoreLocation.framework in Frameworks */,
 				032A81CA10B8EB6100E7FB65 /* MessageUI.framework in Frameworks */,
 				0317DE6910FF95CC00C5C2D4 /* MediaPlayer.framework in Frameworks */,
+				03F2472F1236E25E0017F214 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,9 +318,23 @@
 			name = SPSourcesIcons;
 			sourceTree = "<group>";
 		};
+		03F2470B1236E1180017F214 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				03F2470E1236E1440017F214 /* FMDatabase.h */,
+				03F2470F1236E1440017F214 /* FMDatabase.m */,
+				03F247101236E1440017F214 /* FMDatabaseAdditions.h */,
+				03F247111236E1440017F214 /* FMDatabaseAdditions.m */,
+				03F247121236E1440017F214 /* FMResultSet.h */,
+				03F247131236E1440017F214 /* FMResultSet.m */,
+			);
+			name = FMDB;
+			sourceTree = "<group>";
+		};
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				03F2470B1236E1180017F214 /* FMDB */,
 				032A7B9010B829D100E7FB65 /* EXIF */,
 				031748C110B6E67C00B6116E /* SPEmailAccounts */,
 				031748C210B6E68E00B6116E /* SPSources */,
@@ -327,6 +356,8 @@
 				032A7ECA10B8617C00E7FB65 /* SPImageAnnotation.m */,
 				032A819510B8E7C600E7FB65 /* SPEmailReportVC.h */,
 				032A819610B8E7C600E7FB65 /* SPEmailReportVC.m */,
+				03F2481D1236EFAC0017F214 /* NSNumber+SP.h */,
+				03F2481E1236EFAC0017F214 /* NSNumber+SP.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -390,6 +421,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				03F2472E1236E25E0017F214 /* libsqlite3.dylib */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765070DF74369002DB57D /* CoreGraphics.framework */,
@@ -428,7 +460,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SpyPhone" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 1;
 			mainGroup = 29B97314FDCFA39411CA2CEA /* MyData */;
 			projectDirPath = "";
@@ -516,6 +548,10 @@
 				0310C65510C4BE0800E7ACD2 /* SPImageVC.m in Sources */,
 				037D3A8110F3D57B003A85B0 /* SPEmailMobileMeAccount.m in Sources */,
 				0317DE5210FF954800C5C2D4 /* UIApplication_TVOut.m in Sources */,
+				03F247141236E1440017F214 /* FMDatabase.m in Sources */,
+				03F247151236E1440017F214 /* FMDatabaseAdditions.m in Sources */,
+				03F247161236E1440017F214 /* FMResultSet.m in Sources */,
+				03F2481F1236EFAC0017F214 /* NSNumber+SP.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,7 +601,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = iphoneos3.0;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos3.2;
 			};
 			name = Debug;
 		};
@@ -573,12 +610,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Nicolas Seriot (9V2U949PMC)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = iphoneos3.0;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "32101231-1E4B-460A-8AF0-A5BD41F1D898";
+				SDKROOT = iphoneos3.2;
 			};
 			name = Release;
 		};

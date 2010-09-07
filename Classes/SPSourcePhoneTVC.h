@@ -19,6 +19,9 @@
 	NSString *lastDialed;	
 	NSString *lastContact;
 	NSString *lastForwardNumber;
+	NSMutableArray *callHistories;
+	NSString *prettyBytesSent;
+	NSString *prettyBytesReceived;
 }
 
 @property (nonatomic, retain) NSString *ICCID;
@@ -29,5 +32,8 @@
 @property (nonatomic, retain) NSString *lastDialed;
 @property (nonatomic, retain) NSString *lastContact;
 @property (nonatomic, retain) NSString *lastForwardNumber;
+@property (nonatomic, retain) NSString *prettyBytesSent;
+@property (nonatomic, retain) NSString *prettyBytesReceived;
+@property (nonatomic, retain) NSMutableArray *callHistories;
 
 @end

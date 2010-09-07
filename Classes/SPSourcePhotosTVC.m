@@ -29,12 +29,12 @@
 - (NSArray *)jpgPaths {
 	NSMutableArray *a = [NSMutableArray array];
 	
-//	NSString *path = @"/var/mobile/Media/DCIM";
-	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-	NSString *documentsDirectory = [paths count] ? [paths objectAtIndex:0] : nil;
-	NSString *path = [documentsDirectory stringByAppendingPathComponent:@"../../../Media/DCIM"];
-	path = [path stringByStandardizingPath];
-
+	NSString *path = @"/var/mobile/Media/PhotoData/100APPLE";
+//	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//	NSString *documentsDirectory = [paths count] ? [paths objectAtIndex:0] : nil;
+//	NSString *path = [documentsDirectory stringByAppendingPathComponent:@"../../../Media/DCIM"];
+//	path = [path stringByStandardizingPath];
+	
 	NSDirectoryEnumerator *dirEnumerator = [[NSFileManager defaultManager] enumeratorAtPath:path];
 
 	BOOL isDir;
@@ -46,7 +46,7 @@
 	while(dirContent = [dirEnumerator nextObject]) {
 		filePath = [path stringByAppendingPathComponent:dirContent];
 		exists = [[NSFileManager defaultManager] fileExistsAtPath:filePath isDirectory:&isDir];
-		if(exists && !isDir && [[filePath pathExtension] isEqualToString:@"JPG"]) {
+		if(exists && !isDir && [[filePath pathExtension] isEqualToString:@"THM"]) {
 			[a addObject:filePath];
 		}
 	}
@@ -68,15 +68,15 @@
 		subpool = [[NSAutoreleasePool alloc] init];
 		
 		CLLocationCoordinate2D coord = [UIImage coordinatesOfImageAtPath:s];
-		if(coord.latitude == 0.0 && coord.longitude == 0.0) continue;
-
+		//if(coord.latitude == 0.0 && coord.longitude == 0.0) continue;
 		
 		NSNumber *lat = [NSNumber numberWithDouble:coord.latitude];
 		NSNumber *lon = [NSNumber numberWithDouble:coord.longitude];
 		[coordinates addObject:[NSArray arrayWithObjects:lat, lon, nil]];
 		
-		NSString *coordString = [NSString stringWithFormat:@"%@, %@", lat, lon];
-
+		NSString *coordString = (lat && lon) ? [NSString stringWithFormat:@"%@, %@", lat, lon] : nil;
+		
+		
 		NSError *error = nil;
 		NSDictionary *d = [[NSFileManager defaultManager] attributesOfItemAtPath:s error:&error];
 		if(!d) {
@@ -88,7 +88,7 @@
 
 		SPImageAnnotation *annotation = [SPImageAnnotation annotationWithCoordinate:coord date:date path:s];
 		[annotations performSelectorOnMainThread:@selector(addObject:) withObject:annotation waitUntilDone:YES];
-
+		
 		NSDictionary *cd = [NSDictionary dictionaryWithObject:[NSArray arrayWithObject:coordString] forKey:dateString];
 		[contentsDictionaries performSelectorOnMainThread:@selector(addObject:) withObject:cd waitUntilDone:YES];
 		
@@ -102,6 +102,7 @@
 }
 
 - (void)loadData {
+	
 	if(contentsDictionaries) return;
 
 	UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStylePlain target:self action:@selector(mapButtonClicked:)];
