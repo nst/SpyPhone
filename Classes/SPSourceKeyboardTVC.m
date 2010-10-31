@@ -63,7 +63,14 @@
 	NSMutableSet *set = [NSMutableSet set];
 	
 	NSString *dir = @"/var/mobile/Library/Keyboard/";
-	NSArray *dirContents = [[NSFileManager defaultManager] directoryContentsAtPath:dir];
+	NSError *error = nil;
+	NSArray *dirContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:dir error:&error];
+	
+	if(dirContents == nil) {
+		NSLog(@"-- error: %@", error);
+		return;
+	}
+	
 	for(NSString *filePath in dirContents) {
 		if(![filePath hasSuffix:@".dat"]) continue;
 		NSArray *a = [self wordsInDictionaryCacheFileAtPath:[dir stringByAppendingPathComponent:filePath]];

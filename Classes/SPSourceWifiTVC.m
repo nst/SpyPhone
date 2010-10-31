@@ -8,10 +8,14 @@
 //
 
 #import "SPSourceWifiTVC.h"
+#import "OUILookupTool.h"
 
 @implementation SPSourceWifiTVC
 
 - (void)loadData {
+	
+	//[OUILookupTool lookupBSSID:@"0:30:bd:97:7:72" delegate:self];
+
 	if(contentsDictionaries) return;
 
 	self.contentsDictionaries = [NSMutableArray array];
@@ -24,6 +28,8 @@
 	if(!a) return;
 	
 	for(NSDictionary *d in a) {
+		[OUILookupTool locateWifiAccessPoint:d delegate:self];
+		
 		NSString *name = [d valueForKey:@"SSID_STR"];
 		
 		NSData *joined = [d valueForKey:@"lastJoined"];
@@ -33,6 +39,12 @@
 
 		[contentsDictionaries addObject:[NSDictionary dictionaryWithObject:[NSArray arrayWithObject:name] forKey:date]];
 	}
+}
+
+#pragma mark OUILookupTool
+
+- (void)OUILookupTool:(OUILookupTool *)ouiLookupTool didLocateAccessPoint:(NSDictionary *)ap {
+	//NSLog(@"-- %@", ap);
 }
 
 @end

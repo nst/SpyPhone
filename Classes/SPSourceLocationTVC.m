@@ -9,6 +9,8 @@
 
 #import "SPSourceLocationTVC.h"
 #import <CoreLocation/CoreLocation.h>
+#import "SPMapVC.h"
+#import "SPImageAnnotation.h"
 
 @implementation SPSourceLocationTVC
 
@@ -18,6 +20,16 @@
 @synthesize locString;
 @synthesize locDateString;
 @synthesize timezone;
+@synthesize cachedLocationFromMaps;
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	if(indexPath.section == 0 && indexPath.row == 0 && cachedLocationFromMaps) {
+		SPMapVC *mapVC = [[SPMapVC alloc] initWithNibName:@"SPMapVC" bundle:[NSBundle mainBundle]];
+		[self.navigationController pushViewController:mapVC animated:YES];
+		SPImageAnnotation *annotation = [SPImageAnnotation annotationWithCoordinate:cachedLocationFromMaps.coordinate date:nil path:nil];
+		[mapVC addAnnotation:annotation];
+	}
+}
 
 - (void)loadData {
 	if(contentsDictionaries) return;
@@ -26,6 +38,7 @@
 	NSDictionary *d = [NSDictionary dictionaryWithContentsOfFile:path];
 	NSData *data = [d valueForKey:@"UserLocation"];
 	CLLocation *loc = data ? [NSKeyedUnarchiver unarchiveObjectWithData:data] : nil;
+	self.cachedLocationFromMaps = loc;
 	self.locString = @"";
 	self.locDateString = @"";
 	if(loc) {
@@ -62,6 +75,7 @@
 	[items release];
 //	[geo release];
 	[geoString release];
+	[cachedLocationFromMaps release];
     [super dealloc];
 }
 /*

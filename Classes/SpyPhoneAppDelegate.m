@@ -9,10 +9,11 @@
 
 #import "SpyPhoneAppDelegate.h"
 
-@interface UIApplication (tvout)
-- (void) startTVOut;
-@end 
-
+//
+//@interface UIApplication (tvout)
+//- (void) startTVOut;
+//@end 
+//
 @implementation SpyPhoneAppDelegate
 
 @synthesize window;
@@ -23,12 +24,11 @@
     
     // Add the tab bar controller's current view as a subview of the window
     [window addSubview:tabBarController.view];
-	/*
-	BOOL isTVOutEnabled = [[NSUserDefaults standardUserDefaults] boolForKey:@"TVOutEnabled"];
-	if(isTVOutEnabled) {
-		[[UIApplication sharedApplication] startTVOut];
-	}
-	 */
+	
+//	BOOL isTVOutEnabled = [[NSUserDefaults standardUserDefaults] boolForKey:@"TVOutEnabled"];
+//	if(isTVOutEnabled) {
+//		[[TVOutManager sharedInstance] startTVOut];
+//	}
 }
 
 

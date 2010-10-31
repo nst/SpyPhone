@@ -11,6 +11,8 @@
 #import <MapKit/MapKit.h>
 #import "SPSourceTVC.h"
 
+@class CLLocation;
+
 @interface SPSourceLocationTVC : SPSourceTVC /* <MKReverseGeocoderDelegate> */ {
 	NSArray *items;
 //	MKReverseGeocoder *geo;
@@ -20,11 +22,13 @@
 	NSString *locDateString;
 	NSString *timezone;
 	NSArray *cities;
+	
+	CLLocation *cachedLocationFromMaps;
 }
 
 //@property (nonatomic, retain) MKReverseGeocoder *geo;
 @property (nonatomic, retain) NSString *geoString;
-
+@property (nonatomic, retain) CLLocation *cachedLocationFromMaps;
 @property (nonatomic, retain) NSArray *cities;
 @property (nonatomic, retain) NSString *locString;
 @property (nonatomic, retain) NSString *locDateString;

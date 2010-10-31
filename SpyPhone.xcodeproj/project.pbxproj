@@ -15,7 +15,6 @@
 		0317498610B6F3A300B6116E /* SPEmailGmailAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 0317498510B6F3A300B6116E /* SPEmailGmailAccount.m */; };
 		0317498910B6F49300B6116E /* SPEmailIMAPAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 0317498810B6F49300B6116E /* SPEmailIMAPAccount.m */; };
 		031749AF10B6FB9C00B6116E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 031749AE10B6FB9C00B6116E /* AddressBook.framework */; };
-		0317DE5210FF954800C5C2D4 /* UIApplication_TVOut.m in Sources */ = {isa = PBXBuildFile; fileRef = 0317DE5110FF954800C5C2D4 /* UIApplication_TVOut.m */; };
 		0317DE6910FF95CC00C5C2D4 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0317DE6810FF95CC00C5C2D4 /* MediaPlayer.framework */; };
 		0317DE7C10FF98E900C5C2D4 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0317DE7B10FF98E900C5C2D4 /* Settings.bundle */; };
 		031CD55010BB4A29007C133E /* Email.png in Resources */ = {isa = PBXBuildFile; fileRef = 031CD54810BB4A29007C133E /* Email.png */; };
@@ -41,14 +40,7 @@
 		0328F8BC10B0B1780074A5A1 /* SPWebViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0328F8BB10B0B1780074A5A1 /* SPWebViewVC.xib */; };
 		0328F8C010B0B1AE0074A5A1 /* SPWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0328F8BF10B0B1AE0074A5A1 /* SPWebViewVC.m */; };
 		0328F96110B0CB140074A5A1 /* SPSourceAddressBookTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0328F96010B0CB140074A5A1 /* SPSourceAddressBookTVC.m */; };
-		032A7BA310B829DB00E7FB65 /* EXFGPS.m in Sources */ = {isa = PBXBuildFile; fileRef = 032A7B9510B829DB00E7FB65 /* EXFGPS.m */; };
-		032A7BA610B829DB00E7FB65 /* EXFJpeg.m in Sources */ = {isa = PBXBuildFile; fileRef = 032A7B9B10B829DB00E7FB65 /* EXFJpeg.m */; };
 		032A7D9010B844EF00E7FB65 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032A7D8F10B844EF00E7FB65 /* CoreLocation.framework */; };
-		032A7DB310B8476800E7FB65 /* EXFHandlers.m in Sources */ = {isa = PBXBuildFile; fileRef = 032A7B9710B829DB00E7FB65 /* EXFHandlers.m */; };
-		032A7DB610B8476C00E7FB65 /* EXFJFIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 032A7B9910B829DB00E7FB65 /* EXFJFIF.m */; };
-		032A7DB910B8477000E7FB65 /* EXFMetaData.m in Sources */ = {isa = PBXBuildFile; fileRef = 032A7B9E10B829DB00E7FB65 /* EXFMetaData.m */; };
-		032A7DBF10B8477700E7FB65 /* EXFTagDefinitionHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 032A7BA010B829DB00E7FB65 /* EXFTagDefinitionHolder.m */; };
-		032A7DC210B8477900E7FB65 /* EXFUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 032A7BA210B829DB00E7FB65 /* EXFUtils.m */; };
 		032A7E0610B84C1800E7FB65 /* UIImage+GPS.m in Sources */ = {isa = PBXBuildFile; fileRef = 032A7E0510B84C1800E7FB65 /* UIImage+GPS.m */; };
 		032A7EAD10B85E7F00E7FB65 /* SPMapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 032A7EAC10B85E7F00E7FB65 /* SPMapVC.xib */; };
 		032A7EB110B85E9C00E7FB65 /* SPMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 032A7EB010B85E9C00E7FB65 /* SPMapVC.m */; };
@@ -60,6 +52,25 @@
 		032A819310B8E7BA00E7FB65 /* SPEmailReportVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 032A819210B8E7BA00E7FB65 /* SPEmailReportVC.xib */; };
 		032A819710B8E7C600E7FB65 /* SPEmailReportVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 032A819610B8E7C600E7FB65 /* SPEmailReportVC.m */; };
 		032A81CA10B8EB6100E7FB65 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032A81C910B8EB6100E7FB65 /* MessageUI.framework */; };
+		03380599127CEC2500EAFE64 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 03380594127CEC2500EAFE64 /* FMDatabase.m */; };
+		0338059A127CEC2500EAFE64 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 03380596127CEC2500EAFE64 /* FMDatabaseAdditions.m */; };
+		0338059B127CEC2500EAFE64 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 03380598127CEC2500EAFE64 /* FMResultSet.m */; };
+		033805AE127CEC3100EAFE64 /* EXFGPS.m in Sources */ = {isa = PBXBuildFile; fileRef = 0338059F127CEC3100EAFE64 /* EXFGPS.m */; };
+		033805AF127CEC3100EAFE64 /* EXFHandlers.m in Sources */ = {isa = PBXBuildFile; fileRef = 033805A1127CEC3100EAFE64 /* EXFHandlers.m */; };
+		033805B0127CEC3100EAFE64 /* EXFJFIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 033805A3127CEC3100EAFE64 /* EXFJFIF.m */; };
+		033805B1127CEC3100EAFE64 /* EXFJpeg.m in Sources */ = {isa = PBXBuildFile; fileRef = 033805A5127CEC3100EAFE64 /* EXFJpeg.m */; };
+		033805B2127CEC3100EAFE64 /* EXFMetaData.m in Sources */ = {isa = PBXBuildFile; fileRef = 033805A8127CEC3100EAFE64 /* EXFMetaData.m */; };
+		033805B3127CEC3100EAFE64 /* EXFTagDefinitionHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 033805AB127CEC3100EAFE64 /* EXFTagDefinitionHolder.m */; };
+		033805B4127CEC3100EAFE64 /* EXFUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 033805AD127CEC3100EAFE64 /* EXFUtils.m */; };
+		033805B8127CEC4200EAFE64 /* OUILookupTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 033805B7127CEC4200EAFE64 /* OUILookupTool.m */; };
+		033805DC127CECF900EAFE64 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 033805CD127CECF900EAFE64 /* LICENSE */; };
+		033805DD127CECF900EAFE64 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 033805CF127CECF900EAFE64 /* NSObject+SBJSON.m */; };
+		033805DE127CECF900EAFE64 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 033805D1127CECF900EAFE64 /* NSString+SBJSON.m */; };
+		033805DF127CECF900EAFE64 /* Readme.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 033805D2127CECF900EAFE64 /* Readme.markdown */; };
+		033805E0127CECF900EAFE64 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 033805D4127CECF900EAFE64 /* SBJsonBase.m */; };
+		033805E1127CECF900EAFE64 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 033805D6127CECF900EAFE64 /* SBJsonParser.m */; };
+		033805E2127CECF900EAFE64 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 033805D8127CECF900EAFE64 /* SBJsonStreamWriter.m */; };
+		033805E3127CECF900EAFE64 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 033805DA127CECF900EAFE64 /* SBJsonWriter.m */; };
 		0364934110B16DDD00C88803 /* SPSourceKeyboardTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0364934010B16DDD00C88803 /* SPSourceKeyboardTVC.m */; };
 		0364948C10B28BC800C88803 /* SPSourceTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0364948B10B28BC800C88803 /* SPSourceTVC.m */; };
 		037D3A8110F3D57B003A85B0 /* SPEmailMobileMeAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 037D3A8010F3D57B003A85B0 /* SPEmailMobileMeAccount.m */; };
@@ -69,9 +80,6 @@
 		03B6EFCA10BB547600CF9139 /* gpl-2.0.txt in Resources */ = {isa = PBXBuildFile; fileRef = 03B6EFC910BB547600CF9139 /* gpl-2.0.txt */; };
 		03B6F00410BB588A00CF9139 /* white_hat_mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 03B6F00310BB588A00CF9139 /* white_hat_mask.png */; };
 		03B6F03510BB5F4800CF9139 /* email_mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 03B6F03410BB5F4800CF9139 /* email_mask.png */; };
-		03F247141236E1440017F214 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F2470F1236E1440017F214 /* FMDatabase.m */; };
-		03F247151236E1440017F214 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F247111236E1440017F214 /* FMDatabaseAdditions.m */; };
-		03F247161236E1440017F214 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F247131236E1440017F214 /* FMResultSet.m */; };
 		03F2472F1236E25E0017F214 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 03F2472E1236E25E0017F214 /* libsqlite3.dylib */; };
 		03F2481F1236EFAC0017F214 /* NSNumber+SP.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F2481E1236EFAC0017F214 /* NSNumber+SP.m */; };
 		1D3623260D0F684500981E51 /* SpyPhoneAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* SpyPhoneAppDelegate.m */; };
@@ -100,7 +108,6 @@
 		0317498710B6F49300B6116E /* SPEmailIMAPAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPEmailIMAPAccount.h; sourceTree = "<group>"; };
 		0317498810B6F49300B6116E /* SPEmailIMAPAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPEmailIMAPAccount.m; sourceTree = "<group>"; };
 		031749AE10B6FB9C00B6116E /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
-		0317DE5110FF954800C5C2D4 /* UIApplication_TVOut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIApplication_TVOut.m; sourceTree = "<group>"; };
 		0317DE6810FF95CC00C5C2D4 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		0317DE7B10FF98E900C5C2D4 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		031CD54810BB4A29007C133E /* Email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Email.png; sourceTree = "<group>"; };
@@ -137,24 +144,6 @@
 		0328F8BF10B0B1AE0074A5A1 /* SPWebViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPWebViewVC.m; sourceTree = "<group>"; };
 		0328F95F10B0CB140074A5A1 /* SPSourceAddressBookTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPSourceAddressBookTVC.h; sourceTree = "<group>"; };
 		0328F96010B0CB140074A5A1 /* SPSourceAddressBookTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPSourceAddressBookTVC.m; sourceTree = "<group>"; };
-		032A7B9110B829DB00E7FB65 /* EXFLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXFLogging.h; sourceTree = "<group>"; };
-		032A7B9210B829DB00E7FB65 /* EXF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXF.h; sourceTree = "<group>"; };
-		032A7B9310B829DB00E7FB65 /* EXFConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXFConstants.h; sourceTree = "<group>"; };
-		032A7B9410B829DB00E7FB65 /* EXFGPS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXFGPS.h; sourceTree = "<group>"; };
-		032A7B9510B829DB00E7FB65 /* EXFGPS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXFGPS.m; sourceTree = "<group>"; };
-		032A7B9610B829DB00E7FB65 /* EXFHandlers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXFHandlers.h; sourceTree = "<group>"; };
-		032A7B9710B829DB00E7FB65 /* EXFHandlers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXFHandlers.m; sourceTree = "<group>"; };
-		032A7B9810B829DB00E7FB65 /* EXFJFIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXFJFIF.h; sourceTree = "<group>"; };
-		032A7B9910B829DB00E7FB65 /* EXFJFIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXFJFIF.m; sourceTree = "<group>"; };
-		032A7B9A10B829DB00E7FB65 /* EXFJpeg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXFJpeg.h; sourceTree = "<group>"; };
-		032A7B9B10B829DB00E7FB65 /* EXFJpeg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXFJpeg.m; sourceTree = "<group>"; };
-		032A7B9C10B829DB00E7FB65 /* EXFMutableMetaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXFMutableMetaData.h; sourceTree = "<group>"; };
-		032A7B9D10B829DB00E7FB65 /* EXFMetaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXFMetaData.h; sourceTree = "<group>"; };
-		032A7B9E10B829DB00E7FB65 /* EXFMetaData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXFMetaData.m; sourceTree = "<group>"; };
-		032A7B9F10B829DB00E7FB65 /* EXFTagDefinitionHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXFTagDefinitionHolder.h; sourceTree = "<group>"; };
-		032A7BA010B829DB00E7FB65 /* EXFTagDefinitionHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXFTagDefinitionHolder.m; sourceTree = "<group>"; };
-		032A7BA110B829DB00E7FB65 /* EXFUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXFUtils.h; sourceTree = "<group>"; };
-		032A7BA210B829DB00E7FB65 /* EXFUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXFUtils.m; sourceTree = "<group>"; };
 		032A7D8F10B844EF00E7FB65 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		032A7E0410B84C1800E7FB65 /* UIImage+GPS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GPS.h"; sourceTree = "<group>"; };
 		032A7E0510B84C1800E7FB65 /* UIImage+GPS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GPS.m"; sourceTree = "<group>"; };
@@ -171,6 +160,48 @@
 		032A819510B8E7C600E7FB65 /* SPEmailReportVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPEmailReportVC.h; sourceTree = "<group>"; };
 		032A819610B8E7C600E7FB65 /* SPEmailReportVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPEmailReportVC.m; sourceTree = "<group>"; };
 		032A81C910B8EB6100E7FB65 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		03380593127CEC2500EAFE64 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = FMDB/FMDatabase.h; sourceTree = SOURCE_ROOT; };
+		03380594127CEC2500EAFE64 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = FMDB/FMDatabase.m; sourceTree = SOURCE_ROOT; };
+		03380595127CEC2500EAFE64 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = FMDB/FMDatabaseAdditions.h; sourceTree = SOURCE_ROOT; };
+		03380596127CEC2500EAFE64 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = FMDB/FMDatabaseAdditions.m; sourceTree = SOURCE_ROOT; };
+		03380597127CEC2500EAFE64 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = FMDB/FMResultSet.h; sourceTree = SOURCE_ROOT; };
+		03380598127CEC2500EAFE64 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = FMDB/FMResultSet.m; sourceTree = SOURCE_ROOT; };
+		0338059C127CEC3100EAFE64 /* EXF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXF.h; path = EXIF/EXF.h; sourceTree = SOURCE_ROOT; };
+		0338059D127CEC3100EAFE64 /* EXFConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXFConstants.h; path = EXIF/EXFConstants.h; sourceTree = SOURCE_ROOT; };
+		0338059E127CEC3100EAFE64 /* EXFGPS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXFGPS.h; path = EXIF/EXFGPS.h; sourceTree = SOURCE_ROOT; };
+		0338059F127CEC3100EAFE64 /* EXFGPS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXFGPS.m; path = EXIF/EXFGPS.m; sourceTree = SOURCE_ROOT; };
+		033805A0127CEC3100EAFE64 /* EXFHandlers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXFHandlers.h; path = EXIF/EXFHandlers.h; sourceTree = SOURCE_ROOT; };
+		033805A1127CEC3100EAFE64 /* EXFHandlers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXFHandlers.m; path = EXIF/EXFHandlers.m; sourceTree = SOURCE_ROOT; };
+		033805A2127CEC3100EAFE64 /* EXFJFIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXFJFIF.h; path = EXIF/EXFJFIF.h; sourceTree = SOURCE_ROOT; };
+		033805A3127CEC3100EAFE64 /* EXFJFIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXFJFIF.m; path = EXIF/EXFJFIF.m; sourceTree = SOURCE_ROOT; };
+		033805A4127CEC3100EAFE64 /* EXFJpeg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXFJpeg.h; path = EXIF/EXFJpeg.h; sourceTree = SOURCE_ROOT; };
+		033805A5127CEC3100EAFE64 /* EXFJpeg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXFJpeg.m; path = EXIF/EXFJpeg.m; sourceTree = SOURCE_ROOT; };
+		033805A6127CEC3100EAFE64 /* EXFLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXFLogging.h; path = EXIF/EXFLogging.h; sourceTree = SOURCE_ROOT; };
+		033805A7127CEC3100EAFE64 /* EXFMetaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXFMetaData.h; path = EXIF/EXFMetaData.h; sourceTree = SOURCE_ROOT; };
+		033805A8127CEC3100EAFE64 /* EXFMetaData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXFMetaData.m; path = EXIF/EXFMetaData.m; sourceTree = SOURCE_ROOT; };
+		033805A9127CEC3100EAFE64 /* EXFMutableMetaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXFMutableMetaData.h; path = EXIF/EXFMutableMetaData.h; sourceTree = SOURCE_ROOT; };
+		033805AA127CEC3100EAFE64 /* EXFTagDefinitionHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXFTagDefinitionHolder.h; path = EXIF/EXFTagDefinitionHolder.h; sourceTree = SOURCE_ROOT; };
+		033805AB127CEC3100EAFE64 /* EXFTagDefinitionHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXFTagDefinitionHolder.m; path = EXIF/EXFTagDefinitionHolder.m; sourceTree = SOURCE_ROOT; };
+		033805AC127CEC3100EAFE64 /* EXFUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXFUtils.h; path = EXIF/EXFUtils.h; sourceTree = SOURCE_ROOT; };
+		033805AD127CEC3100EAFE64 /* EXFUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXFUtils.m; path = EXIF/EXFUtils.m; sourceTree = SOURCE_ROOT; };
+		033805B6127CEC4200EAFE64 /* OUILookupTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OUILookupTool.h; sourceTree = "<group>"; };
+		033805B7127CEC4200EAFE64 /* OUILookupTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OUILookupTool.m; sourceTree = "<group>"; };
+		033805CC127CECF900EAFE64 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		033805CD127CECF900EAFE64 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		033805CE127CECF900EAFE64 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		033805CF127CECF900EAFE64 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		033805D0127CECF900EAFE64 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		033805D1127CECF900EAFE64 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		033805D2127CECF900EAFE64 /* Readme.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.markdown; sourceTree = "<group>"; };
+		033805D3127CECF900EAFE64 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		033805D4127CECF900EAFE64 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		033805D5127CECF900EAFE64 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		033805D6127CECF900EAFE64 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		033805D7127CECF900EAFE64 /* SBJsonStreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriter.h; sourceTree = "<group>"; };
+		033805D8127CECF900EAFE64 /* SBJsonStreamWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriter.m; sourceTree = "<group>"; };
+		033805D9127CECF900EAFE64 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		033805DA127CECF900EAFE64 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		033805DB127CECF900EAFE64 /* SBProxyForJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBProxyForJson.h; sourceTree = "<group>"; };
 		0364933F10B16DDD00C88803 /* SPSourceKeyboardTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPSourceKeyboardTVC.h; sourceTree = "<group>"; };
 		0364934010B16DDD00C88803 /* SPSourceKeyboardTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPSourceKeyboardTVC.m; sourceTree = "<group>"; };
 		0364948A10B28BC800C88803 /* SPSourceTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPSourceTVC.h; sourceTree = "<group>"; };
@@ -183,12 +214,6 @@
 		03B6EFC910BB547600CF9139 /* gpl-2.0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "gpl-2.0.txt"; sourceTree = "<group>"; };
 		03B6F00310BB588A00CF9139 /* white_hat_mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white_hat_mask.png; sourceTree = "<group>"; };
 		03B6F03410BB5F4800CF9139 /* email_mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email_mask.png; sourceTree = "<group>"; };
-		03F2470E1236E1440017F214 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
-		03F2470F1236E1440017F214 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
-		03F247101236E1440017F214 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		03F247111236E1440017F214 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		03F247121236E1440017F214 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
-		03F247131236E1440017F214 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		03F2472E1236E25E0017F214 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = /usr/lib/libsqlite3.dylib; sourceTree = "<absolute>"; };
 		03F2481D1236EFAC0017F214 /* NSNumber+SP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+SP.h"; sourceTree = "<group>"; };
 		03F2481E1236EFAC0017F214 /* NSNumber+SP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+SP.m"; sourceTree = "<group>"; };
@@ -278,29 +303,61 @@
 		032A7B9010B829D100E7FB65 /* EXIF */ = {
 			isa = PBXGroup;
 			children = (
+				0338059C127CEC3100EAFE64 /* EXF.h */,
+				0338059D127CEC3100EAFE64 /* EXFConstants.h */,
+				0338059E127CEC3100EAFE64 /* EXFGPS.h */,
+				0338059F127CEC3100EAFE64 /* EXFGPS.m */,
+				033805A0127CEC3100EAFE64 /* EXFHandlers.h */,
+				033805A1127CEC3100EAFE64 /* EXFHandlers.m */,
+				033805A2127CEC3100EAFE64 /* EXFJFIF.h */,
+				033805A3127CEC3100EAFE64 /* EXFJFIF.m */,
+				033805A4127CEC3100EAFE64 /* EXFJpeg.h */,
+				033805A5127CEC3100EAFE64 /* EXFJpeg.m */,
+				033805A6127CEC3100EAFE64 /* EXFLogging.h */,
+				033805A7127CEC3100EAFE64 /* EXFMetaData.h */,
+				033805A8127CEC3100EAFE64 /* EXFMetaData.m */,
+				033805A9127CEC3100EAFE64 /* EXFMutableMetaData.h */,
+				033805AA127CEC3100EAFE64 /* EXFTagDefinitionHolder.h */,
+				033805AB127CEC3100EAFE64 /* EXFTagDefinitionHolder.m */,
+				033805AC127CEC3100EAFE64 /* EXFUtils.h */,
+				033805AD127CEC3100EAFE64 /* EXFUtils.m */,
 				032A7E0410B84C1800E7FB65 /* UIImage+GPS.h */,
 				032A7E0510B84C1800E7FB65 /* UIImage+GPS.m */,
-				032A7B9110B829DB00E7FB65 /* EXFLogging.h */,
-				032A7B9210B829DB00E7FB65 /* EXF.h */,
-				032A7B9310B829DB00E7FB65 /* EXFConstants.h */,
-				032A7B9410B829DB00E7FB65 /* EXFGPS.h */,
-				032A7B9510B829DB00E7FB65 /* EXFGPS.m */,
-				032A7B9610B829DB00E7FB65 /* EXFHandlers.h */,
-				032A7B9710B829DB00E7FB65 /* EXFHandlers.m */,
-				032A7B9810B829DB00E7FB65 /* EXFJFIF.h */,
-				032A7B9910B829DB00E7FB65 /* EXFJFIF.m */,
-				032A7B9A10B829DB00E7FB65 /* EXFJpeg.h */,
-				032A7B9B10B829DB00E7FB65 /* EXFJpeg.m */,
-				032A7B9C10B829DB00E7FB65 /* EXFMutableMetaData.h */,
-				032A7B9D10B829DB00E7FB65 /* EXFMetaData.h */,
-				032A7B9E10B829DB00E7FB65 /* EXFMetaData.m */,
-				032A7B9F10B829DB00E7FB65 /* EXFTagDefinitionHolder.h */,
-				032A7BA010B829DB00E7FB65 /* EXFTagDefinitionHolder.m */,
-				032A7BA110B829DB00E7FB65 /* EXFUtils.h */,
-				032A7BA210B829DB00E7FB65 /* EXFUtils.m */,
 			);
 			name = EXIF;
 			sourceTree = "<group>";
+		};
+		033805B5127CEC4200EAFE64 /* OUILookupTool */ = {
+			isa = PBXGroup;
+			children = (
+				033805B6127CEC4200EAFE64 /* OUILookupTool.h */,
+				033805B7127CEC4200EAFE64 /* OUILookupTool.m */,
+			);
+			path = OUILookupTool;
+			sourceTree = SOURCE_ROOT;
+		};
+		033805CB127CECF900EAFE64 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				033805CC127CECF900EAFE64 /* JSON.h */,
+				033805CD127CECF900EAFE64 /* LICENSE */,
+				033805CE127CECF900EAFE64 /* NSObject+SBJSON.h */,
+				033805CF127CECF900EAFE64 /* NSObject+SBJSON.m */,
+				033805D0127CECF900EAFE64 /* NSString+SBJSON.h */,
+				033805D1127CECF900EAFE64 /* NSString+SBJSON.m */,
+				033805D2127CECF900EAFE64 /* Readme.markdown */,
+				033805D3127CECF900EAFE64 /* SBJsonBase.h */,
+				033805D4127CECF900EAFE64 /* SBJsonBase.m */,
+				033805D5127CECF900EAFE64 /* SBJsonParser.h */,
+				033805D6127CECF900EAFE64 /* SBJsonParser.m */,
+				033805D7127CECF900EAFE64 /* SBJsonStreamWriter.h */,
+				033805D8127CECF900EAFE64 /* SBJsonStreamWriter.m */,
+				033805D9127CECF900EAFE64 /* SBJsonWriter.h */,
+				033805DA127CECF900EAFE64 /* SBJsonWriter.m */,
+				033805DB127CECF900EAFE64 /* SBProxyForJson.h */,
+			);
+			path = JSON;
+			sourceTree = SOURCE_ROOT;
 		};
 		03B6EFF510BB577A00CF9139 /* SPSourcesIcons */ = {
 			isa = PBXGroup;
@@ -321,12 +378,12 @@
 		03F2470B1236E1180017F214 /* FMDB */ = {
 			isa = PBXGroup;
 			children = (
-				03F2470E1236E1440017F214 /* FMDatabase.h */,
-				03F2470F1236E1440017F214 /* FMDatabase.m */,
-				03F247101236E1440017F214 /* FMDatabaseAdditions.h */,
-				03F247111236E1440017F214 /* FMDatabaseAdditions.m */,
-				03F247121236E1440017F214 /* FMResultSet.h */,
-				03F247131236E1440017F214 /* FMResultSet.m */,
+				03380593127CEC2500EAFE64 /* FMDatabase.h */,
+				03380594127CEC2500EAFE64 /* FMDatabase.m */,
+				03380595127CEC2500EAFE64 /* FMDatabaseAdditions.h */,
+				03380596127CEC2500EAFE64 /* FMDatabaseAdditions.m */,
+				03380597127CEC2500EAFE64 /* FMResultSet.h */,
+				03380598127CEC2500EAFE64 /* FMResultSet.m */,
 			);
 			name = FMDB;
 			sourceTree = "<group>";
@@ -336,6 +393,8 @@
 			children = (
 				03F2470B1236E1180017F214 /* FMDB */,
 				032A7B9010B829D100E7FB65 /* EXIF */,
+				033805CB127CECF900EAFE64 /* JSON */,
+				033805B5127CEC4200EAFE64 /* OUILookupTool */,
 				031748C110B6E67C00B6116E /* SPEmailAccounts */,
 				031748C210B6E68E00B6116E /* SPSources */,
 				0328F50810B065530074A5A1 /* SPCell.h */,
@@ -387,7 +446,6 @@
 			isa = PBXGroup;
 			children = (
 				28A0AB4B0D9B1048005BE974 /* SpyPhone_Prefix.pch */,
-				0317DE5110FF954800C5C2D4 /* UIApplication_TVOut.m */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
@@ -461,7 +519,14 @@
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SpyPhone" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* MyData */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -502,6 +567,8 @@
 				03B2C06110BB62A300E05ECB /* data.png in Resources */,
 				03B2C09410BB66DB00E05ECB /* report.png in Resources */,
 				0317DE7C10FF98E900C5C2D4 /* Settings.bundle in Resources */,
+				033805DC127CECF900EAFE64 /* LICENSE in Resources */,
+				033805DF127CECF900EAFE64 /* Readme.markdown in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,24 +601,30 @@
 				031748CA10B6E9A000B6116E /* SPEmailIToolsAccount.m in Sources */,
 				0317498610B6F3A300B6116E /* SPEmailGmailAccount.m in Sources */,
 				0317498910B6F49300B6116E /* SPEmailIMAPAccount.m in Sources */,
-				032A7BA310B829DB00E7FB65 /* EXFGPS.m in Sources */,
-				032A7BA610B829DB00E7FB65 /* EXFJpeg.m in Sources */,
-				032A7DB310B8476800E7FB65 /* EXFHandlers.m in Sources */,
-				032A7DB610B8476C00E7FB65 /* EXFJFIF.m in Sources */,
-				032A7DB910B8477000E7FB65 /* EXFMetaData.m in Sources */,
-				032A7DBF10B8477700E7FB65 /* EXFTagDefinitionHolder.m in Sources */,
-				032A7DC210B8477900E7FB65 /* EXFUtils.m in Sources */,
 				032A7E0610B84C1800E7FB65 /* UIImage+GPS.m in Sources */,
 				032A7EB110B85E9C00E7FB65 /* SPMapVC.m in Sources */,
 				032A7ECB10B8617C00E7FB65 /* SPImageAnnotation.m in Sources */,
 				032A819710B8E7C600E7FB65 /* SPEmailReportVC.m in Sources */,
 				0310C65510C4BE0800E7ACD2 /* SPImageVC.m in Sources */,
 				037D3A8110F3D57B003A85B0 /* SPEmailMobileMeAccount.m in Sources */,
-				0317DE5210FF954800C5C2D4 /* UIApplication_TVOut.m in Sources */,
-				03F247141236E1440017F214 /* FMDatabase.m in Sources */,
-				03F247151236E1440017F214 /* FMDatabaseAdditions.m in Sources */,
-				03F247161236E1440017F214 /* FMResultSet.m in Sources */,
 				03F2481F1236EFAC0017F214 /* NSNumber+SP.m in Sources */,
+				03380599127CEC2500EAFE64 /* FMDatabase.m in Sources */,
+				0338059A127CEC2500EAFE64 /* FMDatabaseAdditions.m in Sources */,
+				0338059B127CEC2500EAFE64 /* FMResultSet.m in Sources */,
+				033805AE127CEC3100EAFE64 /* EXFGPS.m in Sources */,
+				033805AF127CEC3100EAFE64 /* EXFHandlers.m in Sources */,
+				033805B0127CEC3100EAFE64 /* EXFJFIF.m in Sources */,
+				033805B1127CEC3100EAFE64 /* EXFJpeg.m in Sources */,
+				033805B2127CEC3100EAFE64 /* EXFMetaData.m in Sources */,
+				033805B3127CEC3100EAFE64 /* EXFTagDefinitionHolder.m in Sources */,
+				033805B4127CEC3100EAFE64 /* EXFUtils.m in Sources */,
+				033805B8127CEC4200EAFE64 /* OUILookupTool.m in Sources */,
+				033805DD127CECF900EAFE64 /* NSObject+SBJSON.m in Sources */,
+				033805DE127CECF900EAFE64 /* NSString+SBJSON.m in Sources */,
+				033805E0127CECF900EAFE64 /* SBJsonBase.m in Sources */,
+				033805E1127CECF900EAFE64 /* SBJsonParser.m in Sources */,
+				033805E2127CECF900EAFE64 /* SBJsonStreamWriter.m in Sources */,
+				033805E3127CECF900EAFE64 /* SBJsonWriter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,7 +675,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				SDKROOT = iphoneos3.2;
+				SDKROOT = iphoneos4.1;
 			};
 			name = Debug;
 		};
@@ -616,7 +689,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "32101231-1E4B-460A-8AF0-A5BD41F1D898";
-				SDKROOT = iphoneos3.2;
+				SDKROOT = iphoneos4.1;
 			};
 			name = Release;
 		};

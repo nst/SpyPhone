@@ -9,8 +9,9 @@
 
 #import <UIKit/UIKit.h>
 #import "SPSourceTVC.h"
+#import "OUILookupTool.h"
 
-@interface SPSourceWifiTVC : SPSourceTVC  {
+@interface SPSourceWifiTVC : SPSourceTVC <OUILookupToolDelegate> {
 
 }
 
