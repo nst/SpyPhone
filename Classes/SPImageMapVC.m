@@ -7,10 +7,10 @@
 //  Licensed under GPL 2.0 http://www.gnu.org/licenses/gpl-2.0.txt
 //
 
-#import "SPMapVC.h"
+#import "SPImageMapVC.h"
 #import "SPImageVC.h"
 
-@implementation SPMapVC
+@implementation SPImageMapVC
 
 @synthesize annotations;
 
@@ -92,11 +92,9 @@
 	self.annotations = nil;
 }
 
-
 - (void)dealloc {
 	[annotations release];
     [super dealloc];
 }
-
 
 @end

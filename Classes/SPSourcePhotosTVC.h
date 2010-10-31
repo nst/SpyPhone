@@ -9,20 +9,20 @@
 
 #import "SPSourceTVC.h"
 
-@class SPMapVC;
+@class SPImageMapVC;
 @class SPImageVC;
 
 @interface SPSourcePhotosTVC : SPSourceTVC {
 	NSMutableArray *coordinates;
 	NSMutableArray *annotations;
 	
-	IBOutlet SPMapVC *mapVC;
+	IBOutlet SPImageMapVC *mapVC;
 	IBOutlet SPImageVC *imageVC;
 }
 
 @property (nonatomic, retain) NSMutableArray *annotations;
 @property (nonatomic, retain) NSMutableArray *coordinates;
-@property (nonatomic, retain) SPMapVC *mapVC;
+@property (nonatomic, retain) SPImageMapVC *mapVC;
 @property (nonatomic, retain) SPImageVC *imageVC;
 
 @end

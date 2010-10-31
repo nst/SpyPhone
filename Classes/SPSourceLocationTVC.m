@@ -9,7 +9,7 @@
 
 #import "SPSourceLocationTVC.h"
 #import <CoreLocation/CoreLocation.h>
-#import "SPMapVC.h"
+#import "SPImageMapVC.h"
 #import "SPImageAnnotation.h"
 
 @implementation SPSourceLocationTVC
@@ -24,7 +24,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	if(indexPath.section == 0 && indexPath.row == 0 && cachedLocationFromMaps) {
-		SPMapVC *mapVC = [[SPMapVC alloc] initWithNibName:@"SPMapVC" bundle:[NSBundle mainBundle]];
+		SPImageMapVC *mapVC = [[SPImageMapVC alloc] initWithNibName:@"SPImageMapVC" bundle:[NSBundle mainBundle]];
 		[self.navigationController pushViewController:mapVC animated:YES];
 		SPImageAnnotation *annotation = [SPImageAnnotation annotationWithCoordinate:cachedLocationFromMaps.coordinate date:nil path:nil];
 		[mapVC addAnnotation:annotation];

@@ -10,7 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "SPSourcePhotosTVC.h"
 #import "UIImage+GPS.h"
-#import "SPMapVC.h"
+#import "SPImageMapVC.h"
 #import "SPImageVC.h"
 #import "SPImageAnnotation.h"
 

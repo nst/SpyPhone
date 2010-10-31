@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		030AFB2E127D08BF00C9E0C6 /* SPWifiMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 030AFB2C127D08BF00C9E0C6 /* SPWifiMapVC.m */; };
+		030AFB2F127D08BF00C9E0C6 /* SPWifiMapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030AFB2D127D08BF00C9E0C6 /* SPWifiMapVC.xib */; };
+		030AFBA4127D0D6F00C9E0C6 /* SPWifiAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 030AFBA3127D0D6F00C9E0C6 /* SPWifiAnnotation.m */; };
 		0310C65510C4BE0800E7ACD2 /* SPImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0310C65410C4BE0800E7ACD2 /* SPImageVC.m */; };
 		031748B910B6E35C00B6116E /* SPEmailASAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 031748B810B6E35C00B6116E /* SPEmailASAccount.m */; };
 		031748C010B6E63E00B6116E /* SPEmailAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 031748BF10B6E63E00B6116E /* SPEmailAccount.m */; };
@@ -42,8 +45,8 @@
 		0328F96110B0CB140074A5A1 /* SPSourceAddressBookTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0328F96010B0CB140074A5A1 /* SPSourceAddressBookTVC.m */; };
 		032A7D9010B844EF00E7FB65 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032A7D8F10B844EF00E7FB65 /* CoreLocation.framework */; };
 		032A7E0610B84C1800E7FB65 /* UIImage+GPS.m in Sources */ = {isa = PBXBuildFile; fileRef = 032A7E0510B84C1800E7FB65 /* UIImage+GPS.m */; };
-		032A7EAD10B85E7F00E7FB65 /* SPMapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 032A7EAC10B85E7F00E7FB65 /* SPMapVC.xib */; };
-		032A7EB110B85E9C00E7FB65 /* SPMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 032A7EB010B85E9C00E7FB65 /* SPMapVC.m */; };
+		032A7EAD10B85E7F00E7FB65 /* SPImageMapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 032A7EAC10B85E7F00E7FB65 /* SPImageMapVC.xib */; };
+		032A7EB110B85E9C00E7FB65 /* SPImageMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 032A7EB010B85E9C00E7FB65 /* SPImageMapVC.m */; };
 		032A7ECB10B8617C00E7FB65 /* SPImageAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 032A7ECA10B8617C00E7FB65 /* SPImageAnnotation.m */; };
 		032A809A10B8799300E7FB65 /* SPImageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 032A809910B8799300E7FB65 /* SPImageVC.xib */; };
 		032A80F410B8816300E7FB65 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 032A80F210B8816300E7FB65 /* Icon.png */; };
@@ -93,6 +96,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		030AFB2B127D08BF00C9E0C6 /* SPWifiMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPWifiMapVC.h; sourceTree = "<group>"; };
+		030AFB2C127D08BF00C9E0C6 /* SPWifiMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPWifiMapVC.m; sourceTree = "<group>"; };
+		030AFB2D127D08BF00C9E0C6 /* SPWifiMapVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SPWifiMapVC.xib; path = Classes/SPWifiMapVC.xib; sourceTree = "<group>"; };
+		030AFBA2127D0D6F00C9E0C6 /* SPWifiAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPWifiAnnotation.h; sourceTree = "<group>"; };
+		030AFBA3127D0D6F00C9E0C6 /* SPWifiAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPWifiAnnotation.m; sourceTree = "<group>"; };
 		0310C65310C4BE0800E7ACD2 /* SPImageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPImageVC.h; sourceTree = "<group>"; };
 		0310C65410C4BE0800E7ACD2 /* SPImageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPImageVC.m; sourceTree = "<group>"; };
 		031748B710B6E35C00B6116E /* SPEmailASAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPEmailASAccount.h; sourceTree = "<group>"; };
@@ -147,9 +155,9 @@
 		032A7D8F10B844EF00E7FB65 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		032A7E0410B84C1800E7FB65 /* UIImage+GPS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GPS.h"; sourceTree = "<group>"; };
 		032A7E0510B84C1800E7FB65 /* UIImage+GPS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GPS.m"; sourceTree = "<group>"; };
-		032A7EAC10B85E7F00E7FB65 /* SPMapVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPMapVC.xib; sourceTree = "<group>"; };
-		032A7EAF10B85E9C00E7FB65 /* SPMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPMapVC.h; sourceTree = "<group>"; };
-		032A7EB010B85E9C00E7FB65 /* SPMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPMapVC.m; sourceTree = "<group>"; };
+		032A7EAC10B85E7F00E7FB65 /* SPImageMapVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPImageMapVC.xib; sourceTree = "<group>"; };
+		032A7EAF10B85E9C00E7FB65 /* SPImageMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPImageMapVC.h; sourceTree = "<group>"; };
+		032A7EB010B85E9C00E7FB65 /* SPImageMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPImageMapVC.m; sourceTree = "<group>"; };
 		032A7EC910B8617C00E7FB65 /* SPImageAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPImageAnnotation.h; sourceTree = "<group>"; };
 		032A7ECA10B8617C00E7FB65 /* SPImageAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPImageAnnotation.m; sourceTree = "<group>"; };
 		032A809910B8799300E7FB65 /* SPImageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPImageVC.xib; sourceTree = "<group>"; };
@@ -407,12 +415,16 @@
 				0328F4CE10B0614A0074A5A1 /* SPAllSourcesTVC.m */,
 				0328F8BE10B0B1AE0074A5A1 /* SPWebViewVC.h */,
 				0328F8BF10B0B1AE0074A5A1 /* SPWebViewVC.m */,
-				032A7EAF10B85E9C00E7FB65 /* SPMapVC.h */,
-				032A7EB010B85E9C00E7FB65 /* SPMapVC.m */,
+				032A7EAF10B85E9C00E7FB65 /* SPImageMapVC.h */,
+				032A7EB010B85E9C00E7FB65 /* SPImageMapVC.m */,
+				030AFB2B127D08BF00C9E0C6 /* SPWifiMapVC.h */,
+				030AFB2C127D08BF00C9E0C6 /* SPWifiMapVC.m */,
 				0310C65310C4BE0800E7ACD2 /* SPImageVC.h */,
 				0310C65410C4BE0800E7ACD2 /* SPImageVC.m */,
 				032A7EC910B8617C00E7FB65 /* SPImageAnnotation.h */,
 				032A7ECA10B8617C00E7FB65 /* SPImageAnnotation.m */,
+				030AFBA2127D0D6F00C9E0C6 /* SPWifiAnnotation.h */,
+				030AFBA3127D0D6F00C9E0C6 /* SPWifiAnnotation.m */,
 				032A819510B8E7C600E7FB65 /* SPEmailReportVC.h */,
 				032A819610B8E7C600E7FB65 /* SPEmailReportVC.m */,
 				03F2481D1236EFAC0017F214 /* NSNumber+SP.h */,
@@ -468,7 +480,8 @@
 				8D1107310486CEB800E47090 /* SpyPhone-Info.plist */,
 				0328F56210B070AE0074A5A1 /* SPSourceTVC.xib */,
 				0328F8BB10B0B1780074A5A1 /* SPWebViewVC.xib */,
-				032A7EAC10B85E7F00E7FB65 /* SPMapVC.xib */,
+				032A7EAC10B85E7F00E7FB65 /* SPImageMapVC.xib */,
+				030AFB2D127D08BF00C9E0C6 /* SPWifiMapVC.xib */,
 				032A809910B8799300E7FB65 /* SPImageVC.xib */,
 				032A819210B8E7BA00E7FB65 /* SPEmailReportVC.xib */,
 				0317DE7B10FF98E900C5C2D4 /* Settings.bundle */,
@@ -546,7 +559,7 @@
 				0328F51410B065B80074A5A1 /* SPCell.xib in Resources */,
 				0328F56310B070AE0074A5A1 /* SPSourceTVC.xib in Resources */,
 				0328F8BC10B0B1780074A5A1 /* SPWebViewVC.xib in Resources */,
-				032A7EAD10B85E7F00E7FB65 /* SPMapVC.xib in Resources */,
+				032A7EAD10B85E7F00E7FB65 /* SPImageMapVC.xib in Resources */,
 				032A809A10B8799300E7FB65 /* SPImageVC.xib in Resources */,
 				032A80F410B8816300E7FB65 /* Icon.png in Resources */,
 				032A810110B8821D00E7FB65 /* white_hat.png in Resources */,
@@ -569,6 +582,7 @@
 				0317DE7C10FF98E900C5C2D4 /* Settings.bundle in Resources */,
 				033805DC127CECF900EAFE64 /* LICENSE in Resources */,
 				033805DF127CECF900EAFE64 /* Readme.markdown in Resources */,
+				030AFB2F127D08BF00C9E0C6 /* SPWifiMapVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,7 +616,7 @@
 				0317498610B6F3A300B6116E /* SPEmailGmailAccount.m in Sources */,
 				0317498910B6F49300B6116E /* SPEmailIMAPAccount.m in Sources */,
 				032A7E0610B84C1800E7FB65 /* UIImage+GPS.m in Sources */,
-				032A7EB110B85E9C00E7FB65 /* SPMapVC.m in Sources */,
+				032A7EB110B85E9C00E7FB65 /* SPImageMapVC.m in Sources */,
 				032A7ECB10B8617C00E7FB65 /* SPImageAnnotation.m in Sources */,
 				032A819710B8E7C600E7FB65 /* SPEmailReportVC.m in Sources */,
 				0310C65510C4BE0800E7ACD2 /* SPImageVC.m in Sources */,
@@ -625,6 +639,8 @@
 				033805E1127CECF900EAFE64 /* SBJsonParser.m in Sources */,
 				033805E2127CECF900EAFE64 /* SBJsonStreamWriter.m in Sources */,
 				033805E3127CECF900EAFE64 /* SBJsonWriter.m in Sources */,
+				030AFB2E127D08BF00C9E0C6 /* SPWifiMapVC.m in Sources */,
+				030AFBA4127D0D6F00C9E0C6 /* SPWifiAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,8 +11,16 @@
 #import "SPSourceTVC.h"
 #import "OUILookupTool.h"
 
-@interface SPSourceWifiTVC : SPSourceTVC <OUILookupToolDelegate> {
+@class SPWifiMapVC;
 
+@interface SPSourceWifiTVC : SPSourceTVC <OUILookupToolDelegate> {
+	NSMutableArray *annotations;
+	NSMutableArray *accessPoints;
+	IBOutlet SPWifiMapVC *mapVC;
 }
+
+@property (nonatomic, retain) NSMutableArray *annotations;
+@property (nonatomic, retain) NSMutableArray *accessPoints;
+@property (nonatomic, retain) SPWifiMapVC *mapVC;
 
 @end

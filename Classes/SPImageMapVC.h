@@ -12,7 +12,7 @@
 
 @class SPImageVC;
 
-@interface SPMapVC : UIViewController <MKMapViewDelegate> {
+@interface SPImageMapVC : UIViewController <MKMapViewDelegate> {
 	NSArray *annotations;
 	
 	IBOutlet MKMapView *mapView;

@@ -16,7 +16,7 @@
 @synthesize path;
 @synthesize coordinate;
 
-+ (SPImageAnnotation *) annotationWithCoordinate:(CLLocationCoordinate2D)coord date:(NSDate *)date path:(NSString *)path {
++ (SPImageAnnotation *)annotationWithCoordinate:(CLLocationCoordinate2D)coord date:(NSDate *)date path:(NSString *)path {
 	SPImageAnnotation *annotation = [[SPImageAnnotation alloc] init];
 	annotation.coordinate = coord;
 	annotation.path = path;

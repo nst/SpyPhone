@@ -19,8 +19,6 @@
 	
 	NSString *aBSSID = [ap valueForKey:@"BSSID"];
 	
-//	NSMutableDictionary *lookupDict = [NSMutableDictionary dictionaryWithObject:aBSSID forKey:@"bssid"];
-
 	NSDictionary *d = [NSDictionary dictionaryWithObject:aBSSID forKey:@"mac_address"];
 	NSArray *wifiTowers = [NSArray arrayWithObject:d];
 	
@@ -30,6 +28,7 @@
 	[postDictionary setValue:wifiTowers forKey:@"wifi_towers"];
 	
 	NSString *postJSON = [postDictionary JSONRepresentation];
+	[postDictionary release];
 	
 	NSData *data = [postJSON dataUsingEncoding:NSUTF8StringEncoding];
 	
@@ -42,7 +41,6 @@
 	[request setValue:@"application/json" forHTTPHeaderField:@"Content-type"];
 	NSString *contentLength = [NSString stringWithFormat:@"%d", [data length]];
 	[request setValue:contentLength forHTTPHeaderField:@"Content-Length"];
-	[request setValue:@"Jakarta Commons-HttpClient/3.0.1" forHTTPHeaderField:@"User-Agent"];
 	[request setValue:@"www.google.com" forHTTPHeaderField:@"Host"];
 	
 	NSError *error = nil;
@@ -50,21 +48,21 @@
 	NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
 	
 	NSDictionary *responseDict = [responseString JSONValue];
-		
-	[ap addEntriesFromDictionary:responseDict];
 	
-	[self performSelectorOnMainThread:@selector(didFinishLookup:) withObject:ap waitUntilDone:YES];
+	NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:ap, @"originalDict", responseDict, @"responseDict", nil];
+	
+	[self performSelectorOnMainThread:@selector(didFinishLookup:) withObject:params waitUntilDone:YES];
 	
 	[pool release];
 }
 
-- (void)didFinishLookup:(NSDictionary *)ap {
+- (void)didFinishLookup:(NSDictionary *)params {
 //	NSLog(@"-- %@", ap);
+
+	NSMutableDictionary *ap = [params objectForKey:@"originalDict"];
+	NSDictionary *responseDict = [params objectForKey:@"responseDict"];
 	
-//	NSString *latitude = [d valueForKeyPath:@"location.latitude"];
-//	NSString *longitude = [d valueForKeyPath:@"location.longitude"];
-//	
-//	CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake([latitude doubleValue], [longitude doubleValue]);
+	[ap addEntriesFromDictionary:responseDict];
 	
 	[delegate OUILookupTool:self didLocateAccessPoint:ap];
 }
@@ -92,18 +90,17 @@
 	return [a componentsJoinedByString:@":"];
 }
 
-+ (OUILookupTool *)locateWifiAccessPoint:(NSDictionary *)ap delegate:(NSObject <OUILookupToolDelegate> *)aDelegate {
++ (OUILookupTool *)locateWifiAccessPoint:(NSMutableDictionary *)ap delegate:(NSObject <OUILookupToolDelegate> *)aDelegate {
 	NSString *aBSSID = [ap valueForKey:@"BSSID"];
 	NSString *formattedBSSID = [self formattedBSSID:aBSSID];	
 	if(formattedBSSID == nil) return nil;
 	
-	NSMutableDictionary *d = [NSMutableDictionary dictionaryWithDictionary:ap];
-	[d setValue:formattedBSSID forKey:@"BSSID"];
+	[ap setValue:formattedBSSID forKey:@"BSSID"];
 	
 	OUILookupTool *olt = [[OUILookupTool alloc] init];
 	olt.delegate = aDelegate;
 	
-	[NSThread detachNewThreadSelector:@selector(fetchLocationForAccessPointInNewThread:) toTarget:olt withObject:d];
+	[NSThread detachNewThreadSelector:@selector(fetchLocationForAccessPointInNewThread:) toTarget:olt withObject:ap];
 	return [olt autorelease];
 }
 
