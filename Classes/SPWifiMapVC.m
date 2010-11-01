@@ -30,21 +30,21 @@
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
-	
-	[mapView removeAnnotations:annotations];	
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-	[super viewDidAppear:animated];
-	
+		
+	[mapView removeAnnotations:mapView.annotations];
 	[mapView addAnnotations:annotations];
 
 	id <MKAnnotation>annotation = [annotations lastObject];
 	MKCoordinateSpan span = MKCoordinateSpanMake(0.03, 0.03);
 	MKCoordinateRegion region = [mapView regionThatFits:MKCoordinateRegionMake(annotation.coordinate, span)];
 
-	[mapView setRegion:region animated:NO];
-	
+	[mapView setRegion:region animated:NO];	
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+	[super viewDidAppear:animated];
+
+
 	if([annotations count] == 1) [mapView selectAnnotation:[annotations lastObject] animated:YES];
 }
 
@@ -69,6 +69,10 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 */
+
+- (void)mapView:(MKMapView *)aMapView didAddAnnotationViews:(NSArray *)views {
+    [aMapView selectAnnotation:[aMapView.annotations lastObject] animated:YES];
+}
 
 - (void)dealloc {
 	[annotations release];

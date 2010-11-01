@@ -21,8 +21,6 @@
 
 - (void)loadData {
 	
-	//[OUILookupTool lookupBSSID:@"0:30:bd:97:7:72" delegate:self];
-
 	if(contentsDictionaries) return;
 
 	UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStylePlain target:self action:@selector(mapButtonClicked:)];
