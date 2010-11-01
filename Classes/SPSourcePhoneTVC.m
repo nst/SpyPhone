@@ -89,7 +89,8 @@
 
 	path = @"/var/mobile/Library/Preferences/com.apple.mobilephone.plist";
 	d = [NSDictionary dictionaryWithContentsOfFile:path];
-	self.lastDialed = [NSString stringWithFormat:@"%@", [d valueForKey:@"DialerSavedNumber"]];
+	NSString *s = [NSString stringWithFormat:@"%@", [d valueForKey:@"DialerSavedNumber"]];
+	self.lastDialed = [s length] == 0 ? nil : s;
 	
 	self.contentsDictionaries = [NSMutableArray array];
 	

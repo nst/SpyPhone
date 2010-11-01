@@ -37,8 +37,6 @@
 		0328F6BC10B088DD0074A5A1 /* SPSourcePhoneTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0328F6BB10B088DD0074A5A1 /* SPSourcePhoneTVC.m */; };
 		0328F74310B095BA0074A5A1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0328F74210B095BA0074A5A1 /* MapKit.framework */; };
 		0328F75210B09AA60074A5A1 /* SPSourceLocationTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0328F75110B09AA60074A5A1 /* SPSourceLocationTVC.m */; };
-		0328F80910B0A6FB0074A5A1 /* SPSourceSafariTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0328F80810B0A6FB0074A5A1 /* SPSourceSafariTVC.m */; };
-		0328F80C10B0A70B0074A5A1 /* SPSourceYouTubeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0328F80B10B0A70B0074A5A1 /* SPSourceYouTubeTVC.m */; };
 		0328F80F10B0A8B70074A5A1 /* SPSourcePhotosTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0328F80E10B0A8B70074A5A1 /* SPSourcePhotosTVC.m */; };
 		0328F8BC10B0B1780074A5A1 /* SPWebViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0328F8BB10B0B1780074A5A1 /* SPWebViewVC.xib */; };
 		0328F8C010B0B1AE0074A5A1 /* SPWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0328F8BF10B0B1AE0074A5A1 /* SPWebViewVC.m */; };
@@ -142,10 +140,6 @@
 		0328F74210B095BA0074A5A1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0328F75010B09AA60074A5A1 /* SPSourceLocationTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPSourceLocationTVC.h; sourceTree = "<group>"; };
 		0328F75110B09AA60074A5A1 /* SPSourceLocationTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPSourceLocationTVC.m; sourceTree = "<group>"; };
-		0328F80710B0A6FB0074A5A1 /* SPSourceSafariTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPSourceSafariTVC.h; sourceTree = "<group>"; };
-		0328F80810B0A6FB0074A5A1 /* SPSourceSafariTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPSourceSafariTVC.m; sourceTree = "<group>"; };
-		0328F80A10B0A70B0074A5A1 /* SPSourceYouTubeTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPSourceYouTubeTVC.h; sourceTree = "<group>"; };
-		0328F80B10B0A70B0074A5A1 /* SPSourceYouTubeTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPSourceYouTubeTVC.m; sourceTree = "<group>"; };
 		0328F80D10B0A8B70074A5A1 /* SPSourcePhotosTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPSourcePhotosTVC.h; sourceTree = "<group>"; };
 		0328F80E10B0A8B70074A5A1 /* SPSourcePhotosTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPSourcePhotosTVC.m; sourceTree = "<group>"; };
 		0328F8BB10B0B1780074A5A1 /* SPWebViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPWebViewVC.xib; sourceTree = "<group>"; };
@@ -297,10 +291,6 @@
 				0328F6BB10B088DD0074A5A1 /* SPSourcePhoneTVC.m */,
 				0328F75010B09AA60074A5A1 /* SPSourceLocationTVC.h */,
 				0328F75110B09AA60074A5A1 /* SPSourceLocationTVC.m */,
-				0328F80710B0A6FB0074A5A1 /* SPSourceSafariTVC.h */,
-				0328F80810B0A6FB0074A5A1 /* SPSourceSafariTVC.m */,
-				0328F80A10B0A70B0074A5A1 /* SPSourceYouTubeTVC.h */,
-				0328F80B10B0A70B0074A5A1 /* SPSourceYouTubeTVC.m */,
 				0328F80D10B0A8B70074A5A1 /* SPSourcePhotosTVC.h */,
 				0328F80E10B0A8B70074A5A1 /* SPSourcePhotosTVC.m */,
 				0328F95F10B0CB140074A5A1 /* SPSourceAddressBookTVC.h */,
@@ -606,8 +596,6 @@
 				0328F61910B07F360074A5A1 /* SPSourceWifiTVC.m in Sources */,
 				0328F6BC10B088DD0074A5A1 /* SPSourcePhoneTVC.m in Sources */,
 				0328F75210B09AA60074A5A1 /* SPSourceLocationTVC.m in Sources */,
-				0328F80910B0A6FB0074A5A1 /* SPSourceSafariTVC.m in Sources */,
-				0328F80C10B0A70B0074A5A1 /* SPSourceYouTubeTVC.m in Sources */,
 				0328F80F10B0A8B70074A5A1 /* SPSourcePhotosTVC.m in Sources */,
 				0328F8C010B0B1AE0074A5A1 /* SPWebViewVC.m in Sources */,
 				0328F96110B0CB140074A5A1 /* SPSourceAddressBookTVC.m in Sources */,

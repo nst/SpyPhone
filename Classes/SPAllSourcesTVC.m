@@ -25,8 +25,6 @@
 					sourceWifiTVC,
 					sourcePhoneTVC,
 					sourceLocationTVC,
-					sourceSafariTVC,
-					sourceYouTubeTVC,
 					sourcePhotosTVC,
 					sourceAddressBookTVC,
 					sourceKeyboardTVC,
@@ -67,19 +65,6 @@
 	return s;
 }
 
-- (void)didReceiveMemoryWarning {
-	// Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-	
-	// Release any cached data, images, etc that aren't in use.
-}
-
-- (void)viewDidUnload {
-	// Release any retained subviews of the main view.
-	// e.g. self.myOutlet = nil;
-}
-
-
 - (void)dealloc {
 	[sources release];
     [super dealloc];
@@ -114,6 +99,5 @@
 	UIViewController *sourceVC = [sources objectAtIndex:indexPath.row];
 	[self.navigationController pushViewController:sourceVC animated:YES];
 }
-
 
 @end

@@ -13,8 +13,6 @@
 @class SPSourceWifiTVC;
 @class SPSourcePhoneTVC;
 @class SPSourceLocationTVC;
-@class SPSourceSafariTVC;
-@class SPSourceYouTubeTVC;
 @class SPSourcePhotosTVC;
 @class SPSourceAddressBookTVC;
 @class SPSourceKeyboardTVC;
@@ -26,8 +24,6 @@
 	IBOutlet SPSourceWifiTVC *sourceWifiTVC;
 	IBOutlet SPSourcePhoneTVC *sourcePhoneTVC;
 	IBOutlet SPSourceLocationTVC *sourceLocationTVC;
-	IBOutlet SPSourceSafariTVC *sourceSafariTVC;
-	IBOutlet SPSourceYouTubeTVC *sourceYouTubeTVC;
 	IBOutlet SPSourcePhotosTVC *sourcePhotosTVC;
 	IBOutlet SPSourceAddressBookTVC *sourceAddressBookTVC;
 	IBOutlet SPSourceKeyboardTVC *sourceKeyboardTVC;
