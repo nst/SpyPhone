@@ -12,6 +12,8 @@
 #import <AddressBook/AddressBook.h>
 #import "FMDatabase.h"
 #import "NSNumber+SP.h"
+#import <CoreTelephony/CTTelephonyNetworkInfo.h>
+#import <CoreTelephony/CTCarrier.h>
 
 @implementation SPSourcePhoneTVC
 
@@ -57,6 +59,7 @@
 }
 
 - (void)loadData {
+
 	if(contentsDictionaries) return;
 
 	NSString *path = @"/private/var/wireless/Library/Preferences/com.apple.commcenter.plist";
@@ -142,6 +145,21 @@
 	}
 	
 	/**/
+
+	CTTelephonyNetworkInfo *networkInfo = [[CTTelephonyNetworkInfo alloc] init];
+	CTCarrier *carrier = networkInfo.subscriberCellularProvider;
+	[networkInfo release];
+	
+	NSString *s1 = [NSString stringWithFormat:@"%@ %@", [carrier isoCountryCode], [carrier carrierName]];
+	NSString *s2 = [NSString stringWithFormat:@"country %@ network %@", [carrier mobileCountryCode], [carrier mobileNetworkCode]];
+	NSArray *carrierInfoArray = [NSArray arrayWithObjects:s1, s2, nil];
+	NSDictionary *carrierInfo = [NSDictionary dictionaryWithObjectsAndKeys:carrierInfoArray, @"Carrier Info", nil];
+
+	/**/
+	
+	if(carrierInfo) {
+		[self.contentsDictionaries addObject:carrierInfo];	
+	}
 	
 	if(self.lastForwardNumber) {
 		NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[NSArray arrayWithObject:self.lastForwardNumber], @"Call forwarding number", nil];
