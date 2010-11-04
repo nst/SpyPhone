@@ -8,47 +8,39 @@
 //
 
 #import "SpyPhoneAppDelegate.h"
+#import "TVOutManager.h"
 
-//
-//@interface UIApplication (tvout)
-//- (void) startTVOut;
-//@end 
-//
 @implementation SpyPhoneAppDelegate
 
 @synthesize window;
 @synthesize tabBarController;
 
-
-- (void)applicationDidFinishLaunching:(UIApplication *)application {
-    
-    // Add the tab bar controller's current view as a subview of the window
-    [window addSubview:tabBarController.view];
-	
-//	BOOL isTVOutEnabled = [[NSUserDefaults standardUserDefaults] boolForKey:@"TVOutEnabled"];
-//	if(isTVOutEnabled) {
-//		[[TVOutManager sharedInstance] startTVOut];
-//	}
-}
-
-
-/*
-// Optional UITabBarControllerDelegate method
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
-}
-*/
-
-/*
-// Optional UITabBarControllerDelegate method
-- (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed {
-}
-*/
-
-
 - (void)dealloc {
     [tabBarController release];
     [window release];
     [super dealloc];
+}
+
+- (void)applicationDidFinishLaunching:(UIApplication *)application {
+	
+    // Add the tab bar controller's current view as a subview of the window
+    [window addSubview:tabBarController.view];	
+
+	/*
+	 // FIXME: TVOut does not work so well
+	 
+	 1. start SP, suspend
+	 2. plug
+	 3. start SP, suspend
+	 4. start SP, SP quits
+	 5. start SP
+	 */
+	
+	BOOL isTVOutEnabled = [[NSUserDefaults standardUserDefaults] boolForKey:@"TVOutEnabled"];
+	if(isTVOutEnabled) {
+		[TVOutManager sharedInstance].tvSafeMode = NO;
+		[[TVOutManager sharedInstance] startTVOut];
+	}	
 }
 
 @end

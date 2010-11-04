@@ -87,10 +87,10 @@
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		28216C970DB411BC00E5133A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28216C960DB411BC00E5133A /* FirstViewController.m */; };
 		282CCBFE0DB6C98000C4EA27 /* Sources.xib in Resources */ = {isa = PBXBuildFile; fileRef = 282CCBFD0DB6C98000C4EA27 /* Sources.xib */; };
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
 		28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD73870D9D96C1002E5188 /* MainWindow.xib */; };
+		5F0DA1BC12829A6E00CD3B56 /* TVOutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0DA1BB12829A6E00CD3B56 /* TVOutManager.m */; };
 		5F38C609127EBB37003CA424 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F38C608127EBB37003CA424 /* CoreTelephony.framework */; };
 /* End PBXBuildFile section */
 
@@ -225,13 +225,13 @@
 		1D3623250D0F684500981E51 /* SpyPhoneAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpyPhoneAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* SpyPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpyPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		28216C950DB411BC00E5133A /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		28216C960DB411BC00E5133A /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		282CCBFD0DB6C98000C4EA27 /* Sources.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Sources.xib; sourceTree = "<group>"; };
 		288765070DF74369002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28A0AB4B0D9B1048005BE974 /* SpyPhone_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpyPhone_Prefix.pch; sourceTree = "<group>"; };
 		28AD73870D9D96C1002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5F0DA1BA12829A6E00CD3B56 /* TVOutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVOutManager.h; sourceTree = "<group>"; };
+		5F0DA1BB12829A6E00CD3B56 /* TVOutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVOutManager.m; sourceTree = "<group>"; };
 		5F38C608127EBB37003CA424 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* SpyPhone-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SpyPhone-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -392,6 +392,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5F0DA1BA12829A6E00CD3B56 /* TVOutManager.h */,
+				5F0DA1BB12829A6E00CD3B56 /* TVOutManager.m */,
 				03F2470B1236E1180017F214 /* FMDB */,
 				032A7B9010B829D100E7FB65 /* EXIF */,
 				033805CB127CECF900EAFE64 /* JSON */,
@@ -400,8 +402,6 @@
 				031748C210B6E68E00B6116E /* SPSources */,
 				0328F50810B065530074A5A1 /* SPCell.h */,
 				0328F50910B065530074A5A1 /* SPCell.m */,
-				28216C950DB411BC00E5133A /* FirstViewController.h */,
-				28216C960DB411BC00E5133A /* FirstViewController.m */,
 				1D3623240D0F684500981E51 /* SpyPhoneAppDelegate.h */,
 				1D3623250D0F684500981E51 /* SpyPhoneAppDelegate.m */,
 				0328F4CD10B0614A0074A5A1 /* SPAllSourcesTVC.h */,
@@ -589,7 +589,6 @@
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* SpyPhoneAppDelegate.m in Sources */,
-				28216C970DB411BC00E5133A /* FirstViewController.m in Sources */,
 				0328F4CF10B0614A0074A5A1 /* SPAllSourcesTVC.m in Sources */,
 				0328F50A10B065530074A5A1 /* SPCell.m in Sources */,
 				0328F56A10B071110074A5A1 /* SPSourceEmailTVC.m in Sources */,
@@ -633,6 +632,7 @@
 				033805E3127CECF900EAFE64 /* SBJsonWriter.m in Sources */,
 				030AFB2E127D08BF00C9E0C6 /* SPWifiMapVC.m in Sources */,
 				030AFBA4127D0D6F00C9E0C6 /* SPWifiAnnotation.m in Sources */,
+				5F0DA1BC12829A6E00CD3B56 /* TVOutManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
