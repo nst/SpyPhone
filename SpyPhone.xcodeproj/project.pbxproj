@@ -75,6 +75,7 @@
 		0364934110B16DDD00C88803 /* SPSourceKeyboardTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0364934010B16DDD00C88803 /* SPSourceKeyboardTVC.m */; };
 		0364948C10B28BC800C88803 /* SPSourceTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0364948B10B28BC800C88803 /* SPSourceTVC.m */; };
 		037D3A8110F3D57B003A85B0 /* SPEmailMobileMeAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 037D3A8010F3D57B003A85B0 /* SPEmailMobileMeAccount.m */; };
+		037F2E0E128D2E6300EE7E19 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037F2E0D128D2E6300EE7E19 /* QuartzCore.framework */; };
 		03B2C04E10BB624F00E05ECB /* Keyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 03B2C04D10BB624F00E05ECB /* Keyboard.png */; };
 		03B2C06110BB62A300E05ECB /* data.png in Resources */ = {isa = PBXBuildFile; fileRef = 03B2C06010BB62A300E05ECB /* data.png */; };
 		03B2C09410BB66DB00E05ECB /* report.png in Resources */ = {isa = PBXBuildFile; fileRef = 03B2C09310BB66DB00E05ECB /* report.png */; };
@@ -211,6 +212,7 @@
 		0364948B10B28BC800C88803 /* SPSourceTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPSourceTVC.m; sourceTree = "<group>"; };
 		037D3A7F10F3D57B003A85B0 /* SPEmailMobileMeAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPEmailMobileMeAccount.h; sourceTree = "<group>"; };
 		037D3A8010F3D57B003A85B0 /* SPEmailMobileMeAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPEmailMobileMeAccount.m; sourceTree = "<group>"; };
+		037F2E0D128D2E6300EE7E19 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		03B2C04D10BB624F00E05ECB /* Keyboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Keyboard.png; sourceTree = "<group>"; };
 		03B2C06010BB62A300E05ECB /* data.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = data.png; sourceTree = "<group>"; };
 		03B2C09310BB66DB00E05ECB /* report.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = report.png; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				0317DE6910FF95CC00C5C2D4 /* MediaPlayer.framework in Frameworks */,
 				03F2472F1236E25E0017F214 /* libsqlite3.dylib in Frameworks */,
 				5F38C609127EBB37003CA424 /* CoreTelephony.framework in Frameworks */,
+				037F2E0E128D2E6300EE7E19 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +498,7 @@
 				032A7D8F10B844EF00E7FB65 /* CoreLocation.framework */,
 				032A81C910B8EB6100E7FB65 /* MessageUI.framework */,
 				0317DE6810FF95CC00C5C2D4 /* MediaPlayer.framework */,
+				037F2E0D128D2E6300EE7E19 /* QuartzCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

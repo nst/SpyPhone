@@ -7,28 +7,12 @@
 //
 // http://www.touchcentric.com/blog/
 
-// marco modifications
-//   device orientation
-//   display link sugegstion from github
-//   CALayer
-//   USE_UIGETSCREENIMAGE is defined
-//   kFPS set to 30
-//   commented NSLog
-
 
 #import <QuartzCore/QuartzCore.h>
-
-
 #import "TVOutManager.h"
 
-#define USE_LAYER
-#define kFPS 30
-
-#define MethodBackgroundThread  0
-#define MethodDisplayLink       1
-#define MethodTimer          2
-
-#define SynchronizationMethod	MethodDisplayLink
+#define kFPS 15
+#define kUseBackgroundThread	NO
 
 //
 // Warning: once again, we can't use UIGetScreenImage for shipping apps (as of late July 2010)
@@ -60,14 +44,19 @@ CGImageRef UIGetScreenImage();
 - (id) init
 {
     self = [super init];
-	// catch screen-related notifications
-	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(screenDidConnectNotification:) name: UIScreenDidConnectNotification object: nil];
-	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(screenDidDisconnectNotification:) name: UIScreenDidDisconnectNotification object: nil];
-	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(screenModeDidChangeNotification:) name: UIScreenModeDidChangeNotification object: nil];
-	
-	// catch orientation notifications
-	[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
-	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(deviceOrientationDidChange:) name: UIDeviceOrientationDidChangeNotification object: nil];		
+    if (self) {
+		// can't imagine why, but just in case
+		[[NSNotificationCenter defaultCenter] removeObserver: self];
+		
+		// catch screen-related notifications
+		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(screenDidConnectNotification:) name: UIScreenDidConnectNotification object: nil];
+		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(screenDidDisconnectNotification:) name: UIScreenDidDisconnectNotification object: nil];
+		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(screenModeDidChangeNotification:) name: UIScreenModeDidChangeNotification object: nil];
+		
+		// catch orientation notifications
+		[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(deviceOrientationDidChange:) name: UIDeviceOrientationDidChangeNotification object: nil];		
+    }
     return self;
 }
 
@@ -103,7 +92,7 @@ CGImageRef UIGetScreenImage();
 	
 	NSArray* screens = [UIScreen screens];
 	if ([screens count] <= 1) {
-//		NSLog(@"TVOutManager: startTVOut failed (no external screens detected)");
+		NSLog(@"TVOutManager: startTVOut failed (no external screens detected)");
 		return;	
 	}
 	
@@ -141,7 +130,7 @@ CGImageRef UIGetScreenImage();
 		CGFloat vert = max.height / CGRectGetHeight(mirrorRect);
 		CGFloat bigScale = horiz < vert ? horiz : vert;
 		mirrorRect = CGRectMake(mirrorRect.origin.x, mirrorRect.origin.y, mirrorRect.size.width * bigScale, mirrorRect.size.height * bigScale);
-
+		
 		mirrorView = [[UIImageView alloc] initWithFrame: mirrorRect];
 		mirrorView.center = tvoutWindow.center;
 		
@@ -165,12 +154,7 @@ CGImageRef UIGetScreenImage();
 
 		[self updateTVOut];
 
-		if (SynchronizationMethod == MethodBackgroundThread) {
-			[NSThread detachNewThreadSelector:@selector(updateLoop) toTarget:self withObject:nil];
-		}
-		else if (SynchronizationMethod == MethodDisplayLink) {
-			[self performSelectorInBackground:@selector(startDisplayLink) withObject:nil];
-		}
+		if (kUseBackgroundThread) [NSThread detachNewThreadSelector:@selector(updateLoop) toTarget:self withObject:nil];
 		else {
 			updateTimer = [NSTimer scheduledTimerWithTimeInterval: (1.0/kFPS) target: self selector: @selector(updateTVOut) userInfo: nil repeats: YES];
 			[updateTimer retain];
@@ -192,29 +176,6 @@ CGImageRef UIGetScreenImage();
 	}
 }
 
-
-- (void) updateTVOutForDisplayLink
-{
-	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-	[self updateTVOut];
-	[pool release];
-}
-
-
-- (void) startDisplayLink
-{
-	done = NO;
-	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-	CADisplayLink *displayLink =  [CADisplayLink displayLinkWithTarget:self selector:@selector(updateTVOutForDisplayLink)];
-	[displayLink setFrameInterval:(60 / kFPS)];
-	[displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
-	while (!done) {
-		[[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:1.0f]];
-	}
-	[displayLink invalidate];
-	[pool release];
-}
-
 - (void) updateTVOut;
 {
 #ifdef USE_UIGETSCREENIMAGE
@@ -222,13 +183,10 @@ CGImageRef UIGetScreenImage();
 	// however, it's better for demos, since it includes the status bar and captures animated transitions
 	
 	CGImageRef cgScreen = UIGetScreenImage();
-#ifdef USE_LAYER
-	mirrorView.layer.contents = (id)cgScreen;
-#else
 	if (cgScreen) image = [UIImage imageWithCGImage:cgScreen];
 	mirrorView.image = image;
-#endif
 	CGImageRelease(cgScreen);
+	
 #else
 	
 	// from http://developer.apple.com/iphone/library/qa/qa2010/qa1703.html	
@@ -277,19 +235,19 @@ CGImageRef UIGetScreenImage();
 
 -(void) screenDidConnectNotification: (NSNotification*) notification
 {
-	//NSLog(@"Screen connected: %@", [notification object]);
+	NSLog(@"Screen connected: %@", [notification object]);
 	[self startTVOut];
 }
 
 -(void) screenDidDisconnectNotification: (NSNotification*) notification
 {
-	//NSLog(@"Screen disconnected: %@", [notification object]);
+	NSLog(@"Screen disconnected: %@", [notification object]);
 	[self stopTVOut];
 }
 
 -(void) screenModeDidChangeNotification: (NSNotification*) notification
 {
-	//NSLog(@"Screen mode changed: %@", [notification object]);
+	NSLog(@"Screen mode changed: %@", [notification object]);
 	[self startTVOut];
 }
 
@@ -304,7 +262,7 @@ CGImageRef UIGetScreenImage();
 		[UIView beginAnimations:@"turnRight" context:nil];
 		mirrorView.transform = CGAffineTransformRotate(CGAffineTransformIdentity, M_PI * -1.5);
 		[UIView commitAnimations];
-	} else if (UIDeviceOrientationIsPortrait ([[UIDevice currentDevice] orientation])) {
+	} else {
 		[UIView beginAnimations:@"turnUp" context:nil];
 		mirrorView.transform = CGAffineTransformIdentity;
 		[UIView commitAnimations];
