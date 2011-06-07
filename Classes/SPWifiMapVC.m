@@ -38,7 +38,12 @@
 	MKCoordinateSpan span = MKCoordinateSpanMake(0.03, 0.03);
 	MKCoordinateRegion region = [mapView regionThatFits:MKCoordinateRegionMake(annotation.coordinate, span)];
 
+    @try {
 	[mapView setRegion:region animated:NO];	
+    } @catch (NSException *exception) {
+        NSLog(@"-- %@", exception);
+    } @finally {
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated {
