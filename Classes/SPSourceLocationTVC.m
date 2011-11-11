@@ -27,7 +27,8 @@
 		SPImageMapVC *mapVC = [[SPImageMapVC alloc] initWithNibName:@"SPImageMapVC" bundle:[NSBundle mainBundle]];
 		[self.navigationController pushViewController:mapVC animated:YES];
 		SPImageAnnotation *annotation = [SPImageAnnotation annotationWithCoordinate:cachedLocationFromMaps.coordinate date:nil path:nil];
-		[mapVC addAnnotation:annotation];
+        if(annotation)
+            [mapVC addAnnotation:annotation];
 	}
 }
 

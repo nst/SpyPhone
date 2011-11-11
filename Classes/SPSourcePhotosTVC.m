@@ -22,35 +22,38 @@
 @synthesize imageVC;
 
 - (void)mapButtonClicked:(id)sender {
-	mapVC.annotations = annotations;
-	[self.navigationController pushViewController:mapVC animated:YES];
+    NSArray *annotationsWithValidCoordinates = [annotations filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id evaluatedObject, NSDictionary *bindings) {
+        SPImageAnnotation *annotation = (SPImageAnnotation *)evaluatedObject;
+        return [annotation hasValidCoordinates];
+    }] ];
+    
+	mapVC.annotations = annotationsWithValidCoordinates;
+
+    [self.navigationController pushViewController:mapVC animated:YES];
 }
 
-- (NSArray *)jpgPaths {
+- (NSArray *)jpgPngPaths {
 	NSMutableArray *a = [NSMutableArray array];
-	
-	NSString *path = @"/var/mobile/Media/PhotoData/100APPLE";
-//	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-//	NSString *documentsDirectory = [paths count] ? [paths objectAtIndex:0] : nil;
-//	NSString *path = [documentsDirectory stringByAppendingPathComponent:@"../../../Media/DCIM"];
-//	path = [path stringByStandardizingPath];
-	
-	NSDirectoryEnumerator *dirEnumerator = [[NSFileManager defaultManager] enumeratorAtPath:path];
+	    
+	NSString *dirPath = @"/private/var/mobile/Media/PhotoStreamsData/";	
+    NSFileManager *fm = [[NSFileManager alloc] init];
+    NSDirectoryEnumerator *dirEnum = [fm enumeratorAtPath:dirPath];
+    
+    NSString *path = nil;
+    while (path = [dirEnum nextObject]) {
+        
+        if([[path pathComponents] containsObject:@".MISC"]) continue;
+        
+        NSString *fullPath = [dirPath stringByAppendingPathComponent:path];
 
-	BOOL isDir;
-
-	BOOL exists;
-	NSString *filePath = nil;
-
-	NSString *dirContent = nil;	
-	while(dirContent = [dirEnumerator nextObject]) {
-		filePath = [path stringByAppendingPathComponent:dirContent];
-		exists = [[NSFileManager defaultManager] fileExistsAtPath:filePath isDirectory:&isDir];
-		if(exists && !isDir && [[filePath pathExtension] isEqualToString:@"THM"]) {
-			[a addObject:filePath];
-		}
-	}
-	
+        if([fm isReadableFileAtPath:fullPath] == NO) continue;
+        
+        NSString *ext = [fullPath pathExtension];
+        if([ext isEqualToString:@"JPG"] || [ext isEqualToString:@"PNG"]) {
+            [a addObject:fullPath];
+        }
+    }
+    
 	return a;
 }
 
@@ -58,7 +61,9 @@
 
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 
-	NSEnumerator *e = [[self jpgPaths] reverseObjectEnumerator];
+    NSArray *jpgPngPaths = [self jpgPngPaths];
+    
+	NSEnumerator *e = [jpgPngPaths reverseObjectEnumerator];
 
 	NSAutoreleasePool *subpool = [[NSAutoreleasePool alloc] init];
 
@@ -76,7 +81,6 @@
 		
 		NSString *coordString = (lat && lon) ? [NSString stringWithFormat:@"%@, %@", lat, lon] : nil;
 		
-		
 		NSError *error = nil;
 		NSDictionary *d = [[NSFileManager defaultManager] attributesOfItemAtPath:s error:&error];
 		if(!d) {
@@ -85,16 +89,18 @@
 		}
 		NSDate *date = [d fileModificationDate];
 		NSString *dateString = date ? [date description] : @"";
-
+        
 		SPImageAnnotation *annotation = [SPImageAnnotation annotationWithCoordinate:coord date:date path:s];
-		[annotations performSelectorOnMainThread:@selector(addObject:) withObject:annotation waitUntilDone:YES];
-		
+        [annotations performSelectorOnMainThread:@selector(addObject:) withObject:annotation waitUntilDone:YES];
+		        
 		NSDictionary *cd = [NSDictionary dictionaryWithObject:[NSArray arrayWithObject:coordString] forKey:dateString];
 		[contentsDictionaries performSelectorOnMainThread:@selector(addObject:) withObject:cd waitUntilDone:YES];
 		
 		[self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
 		
-		[mapVC performSelectorOnMainThread:@selector(addAnnotation:) withObject:annotation waitUntilDone:YES];
+        if([annotation hasValidCoordinates]) {
+            [mapVC performSelectorOnMainThread:@selector(addAnnotation:) withObject:annotation waitUntilDone:YES];
+        }
 	}
 	
 	[subpool release];

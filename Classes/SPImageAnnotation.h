@@ -24,5 +24,6 @@
 + (SPImageAnnotation *) annotationWithCoordinate:(CLLocationCoordinate2D)coord date:(NSDate *)date path:(NSString *)path;
 
 - (NSString *)annotationViewIdentifier;
+- (BOOL)hasValidCoordinates;
 
 @end

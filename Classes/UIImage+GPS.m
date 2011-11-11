@@ -15,7 +15,7 @@
 // adapted from http://davidjhinson.wordpress.com/2009/06/05/you-can-have-it-in-any-color-as-long-as-its-black/
 +(CLLocationCoordinate2D)coordinatesOfImageAtPath:(NSString *)path {
 	CLLocationCoordinate2D coord = {0.0, 0.0};
-	
+	    
 	NSData *data =[NSData dataWithContentsOfFile:path];
 	if(!data) return coord;
 	
@@ -26,7 +26,7 @@
 	EXFGPSLoc *lon   = [jpegScanner.exifMetaData tagValue:[NSNumber numberWithInt:EXIF_GPSLongitude]];
 	NSString *lonRef = [jpegScanner.exifMetaData tagValue:[NSNumber numberWithInt:EXIF_GPSLongitudeRef]];
 	[jpegScanner release];
-	
+    
 	if([latRef length] == 0 || [lonRef length] == 0) return coord;
 	
 	coord.latitude = [[NSString stringWithFormat:@"%f", lat.degrees.numerator + ((float)lat.minutes.numerator / (float)lat.minutes.denominator) / 60.0] floatValue];
