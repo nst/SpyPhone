@@ -1,4 +1,6 @@
-On December 2nd, 2009, I talked in Geneva on [iPhone Privacy](http://seriot.ch/resources/talks_papers/iPhonePrivacy.pdf). I called the following Apple claim into question:
+At BlackHat DC 2010, I presented a paper called [iPhone Privacy](http://seriot.ch/resources/talks_papers/iPhonePrivacy.pdf).
+
+In this paper, I call the following Apple claim into question:
 
 > Applications on the device are "sandboxed" so they cannot access data stored by other applications.
 
@@ -10,4 +12,3 @@ SpyPhone demoes it is not exactly true. It shows the kind of data a rogue applic
 
 These data do certainly interest marketers, spammers, thieves, competitors and law enforcement officials.
 
-See [http://seriot.ch/blog.php?article=20091203](http://seriot.ch/blog.php?article=20091203) for more informations.
