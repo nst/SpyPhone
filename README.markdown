@@ -6,7 +6,7 @@ In this paper, I call the following Apple claim into question:
 
 > In addition, system files, resources, and the kernel are shielded from the user's application space.
 
-> Source: [iPhone in Business - Security Overview](http://images.apple.com/iphone/business/docs/iPhone_Security_Overview.pdf)
+> Source: [iPhone in Business - Security Overview](http://www.apple.com/iphone/business/docs/iPhone_Security.pdf)
 
 SpyPhone demoes it is not exactly true. It shows the kind of data a rogue application can collect in a non jailbroken iPhone.
 
